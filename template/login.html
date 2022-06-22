@@ -17,18 +17,30 @@
             <a class="navbar-brand" href="#">BooksForWorms</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Recommendation</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
+            <li class="homepage.html"><a href="#">Home</a></li>
+            <li><a href="recommendation.html">Recommendation</a></li>
+            <li><a href="active">Login</a></li>
+            <li><a href="register.html">Register</a></li>
           </ul>
         </div>
       </nav>
-      
+
       <div class="container">
-        <h3>Navbar Forms</h3>
-        <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the navbar.</p>
+        <h3>Login</h3>
+        <form action="/action_page.php">
+          <div class="form-group">
+            <label for="username">Username:</label><br>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username"><br>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label><br>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password"><br>
+          </div>
+          <button type="submit" class="btn btn-default">Login</button>
+        </form>
+
+        <!--<p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the navbar.</p> -->
       </div>
-    
+
 </body>
 </html>
