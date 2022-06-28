@@ -1,12 +1,12 @@
 package com.project2.repository.entities;
 
-public class RegisterEntity {
+public class UserEntity {
     private int user_id;
     private String username;
     private String password;
     private String email;
 
-    public RegisterEntity(int user_id, String username, String password, String email) {
+    public UserEntity(int user_id, String username, String password, String email) {
         this.user_id = user_id;
         this.username = username;
         this.password = password;
@@ -32,7 +32,7 @@ public class RegisterEntity {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        RegisterEntity other = (RegisterEntity) obj;
+        UserEntity other = (UserEntity) obj;
         if (email == null) {
             if (other.email != null)
                 return false;
@@ -87,7 +87,7 @@ public class RegisterEntity {
 
     @Override
     public String toString() {
-        return "RegisterEntity [email=" + email + ", password=" + password + ", user_id=" + user_id + ", username="
+        return "UserEntity [email=" + email + ", password=" + password + ", user_id=" + user_id + ", username="
                 + username + "]";
     }
 

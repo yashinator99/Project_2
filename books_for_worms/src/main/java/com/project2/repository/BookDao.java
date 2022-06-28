@@ -37,7 +37,8 @@ public class BookDao implements BookDaoInterface {
                         resultSet.getString(3),
                         resultSet.getString(4),
                         resultSet.getDate(5),
-                        resultSet.getBoolean(6));
+                        resultSet.getBoolean(6),
+                        resultSet.getString(7));
             }
 
         } catch (SQLException e) {
