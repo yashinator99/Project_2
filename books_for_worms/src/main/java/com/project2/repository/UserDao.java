@@ -45,6 +45,27 @@ public class UserDao implements UserDaoInterface{
 
     @Override
     public UserEntity select(String username, String password){
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "SELECT * FROM users WHERE user_name=? AND password=? ;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,username);
+            preparedStatement.setString(2,password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                return new UserEntity(
+                        resultSet.getInt(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getString(4));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 }
