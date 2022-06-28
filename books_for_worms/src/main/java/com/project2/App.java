@@ -21,6 +21,11 @@ public class App {
             app.get("/", ctx -> {
                 ctx.redirect("/homepage.html");
             });
+
+            app.get("/recommmendation.html", ctx ->
+                ctx.result("Hello world"));
         });
+
+        
     }
 }
