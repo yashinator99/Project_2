@@ -15,6 +15,13 @@ public class BookDao implements BookDaoInterface {
     @Override
     public void insert(BookEntity bookEntity) {
         // TODO Auto-generated method stub
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "INSERT INTO books (?, ?, ?, ?, ?, ?, ?) ;";
+
+        try {
+            PreparedStatement preparedStatement = connection.
+
+        }
 
     }
 
