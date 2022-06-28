@@ -9,14 +9,17 @@ public class BookEntity {
     private String genre;
     private Date year;
     private boolean fiction;
+    private String description;
 
-    public BookEntity(int book_id, String title, String author, String genre, Date year, boolean fiction) {
+    public BookEntity(int book_id, String title, String author, String genre, Date year, boolean fiction,
+            String description) {
         this.book_id = book_id;
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.year = year;
         this.fiction = fiction;
+        this.description = description;
     }
 
     @Override
@@ -25,6 +28,7 @@ public class BookEntity {
         int result = 1;
         result = prime * result + ((author == null) ? 0 : author.hashCode());
         result = prime * result + book_id;
+        result = prime * result + ((description == null) ? 0 : description.hashCode());
         result = prime * result + (fiction ? 1231 : 1237);
         result = prime * result + ((genre == null) ? 0 : genre.hashCode());
         result = prime * result + ((title == null) ? 0 : title.hashCode());
@@ -47,6 +51,11 @@ public class BookEntity {
         } else if (!author.equals(other.author))
             return false;
         if (book_id != other.book_id)
+            return false;
+        if (description == null) {
+            if (other.description != null)
+                return false;
+        } else if (!description.equals(other.description))
             return false;
         if (fiction != other.fiction)
             return false;
@@ -116,10 +125,18 @@ public class BookEntity {
         this.fiction = fiction;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
-        return "BookEntity [author=" + author + ", book_id=" + book_id + ", fiction=" + fiction + ", genre=" + genre
-                + ", title=" + title + ", year=" + year + "]";
+        return "BookEntity [author=" + author + ", book_id=" + book_id + ", description=" + description + ", fiction="
+                + fiction + ", genre=" + genre + ", title=" + title + ", year=" + year + "]";
     }
 
 }
