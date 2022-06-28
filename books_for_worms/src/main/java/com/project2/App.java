@@ -12,7 +12,7 @@ public class App {
         
         Javalin app = Javalin.create(
             config -> {
-                config.addStaticFiles("/public", Location.CLASSPATH);
+                config.addStaticFiles("/templates", Location.CLASSPATH);
             }
         );        
         app.start(9090);
