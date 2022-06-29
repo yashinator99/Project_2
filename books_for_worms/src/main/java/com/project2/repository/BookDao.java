@@ -82,13 +82,13 @@ public class BookDao implements BookDaoInterface {
 
             while (resultSet.next()){
                 BookEntity nextBook = new BookEntity(
-                    resultSet.getInt(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4),
-                    resultSet.getDate(5),
-                    resultSet.getBoolean(6),
-                    resultSet.getString(7));
+                    resultSet.getInt("book_id"),
+                    resultSet.getString("title"),
+                    resultSet.getString("author"),
+                    resultSet.getString("genre"),
+                    resultSet.getDate("year"),
+                    resultSet.getBoolean("fiction"),
+                    resultSet.getString("description"));
 
                 bookList.add(nextBook);
             }
