@@ -37,9 +37,9 @@ public class App {
         });
 
         System.out.println(ConnectionFactory.getConnection());
-        UserDao newUserDao = new UserDao();
+        BookDao newBook = new BookDao();
         
-        System.out.print(newUserDao.selectAll());
+        System.out.print(newBook.random());
 
 
 
