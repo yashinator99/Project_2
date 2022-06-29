@@ -1,9 +1,11 @@
 package com.project2.repository;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.project2.repository.entities.BookEntity;
@@ -69,13 +71,60 @@ public class BookDao implements BookDaoInterface {
 
     @Override
     public List<BookEntity> selectAll() {
-        // TODO Auto-generated method stub
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "SELECT * FROM books;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<BookEntity> bookList = new ArrayList<>();
+
+            while (resultSet.next()){
+                BookEntity nextBook = new BookEntity(
+                    resultSet.getInt(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getDate(5),
+                    resultSet.getBoolean(6),
+                    resultSet.getString(7));
+
+                bookList.add(nextBook);
+            }
+
+            return bookList;
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
     public void update(BookEntity bookEntity) {
-        // TODO Auto-generated method stub
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "UPDATE books SET title=?, author=?, genre=?, year=?, fiction=?, description=? WHERE book_id=? ;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, bookEntity.getTitle());
+            preparedStatement.setString(2, bookEntity.getAuthor());
+            preparedStatement.setString(3, bookEntity.getGenre());
+            preparedStatement.setDate(4, bookEntity.getYear());
+            preparedStatement.setBoolean(5, bookEntity.isFiction());
+            preparedStatement.setString(6, bookEntity.getDescription());
+            preparedStatement.setInt(7, bookEntity.getBook_id());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                return;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return;
 
     }
 

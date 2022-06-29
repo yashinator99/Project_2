@@ -1,9 +1,14 @@
 package com.project2;
 
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.project2.repository.BookDao;
 import com.project2.repository.LibraryDao;
 import com.project2.repository.UserDao;
 import com.project2.repository.entities.BookEntity;
+import com.project2.repository.entities.LibraryEntity;
 import com.project2.repository.entities.UserEntity;
 import com.project2.util.ConnectionFactory;
 
@@ -28,15 +33,15 @@ public class App {
                 ctx.redirect("/homepage.html");
             });
 
-            app.get("/recommmendation.html", ctx -> ctx.result("Hello world"));
+            //app.get("/recommmendation.html", ctx -> ctx.result("Hello world"));
         });
 
         System.out.println(ConnectionFactory.getConnection());
-        BookDao bookDao = new BookDao();
-        
-        BookEntity checkBook = bookDao.select(31);
-        System.out.println(checkBook);
-        bookDao.delete(checkBook);
+        UserEntity newUser = new UserEntity(2, "fake", "fake", "fake");
+        LibraryDao nLibraryDao = new LibraryDao();
+        System.out.print(nLibraryDao.select(newUser));
+
+
 
     }
 }
