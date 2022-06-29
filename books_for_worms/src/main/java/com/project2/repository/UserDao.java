@@ -91,6 +91,24 @@ public class UserDao implements UserDaoInterface {
 
     
     public void update(UserEntity userEntity){
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "UPDATE users SET user_name=?, password=?, email=? WHERE user_id=? ;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, userEntity.getUsername());
+            preparedStatement.setString(2, userEntity.getPassword());
+            preparedStatement.setString(3, userEntity.getEmail());
+            preparedStatement.setInt(4, userEntity.getUser_id());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                return;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
         return;
     }
 

@@ -38,8 +38,9 @@ public class App {
 
         System.out.println(ConnectionFactory.getConnection());
         UserDao newUserDao = new UserDao();
+        UserEntity newUser = new UserEntity(4,"fakeUser", "notPassword", "fake@gmail.com");
         
-        newUserDao.delete(3);
+        newUserDao.update(newUser);
 
 
 
