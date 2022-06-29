@@ -1,5 +1,8 @@
 package com.project2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.project2.repository.BookDao;
 import com.project2.repository.LibraryDao;
 import com.project2.repository.UserDao;
@@ -28,15 +31,16 @@ public class App {
                 ctx.redirect("/homepage.html");
             });
 
-            app.get("/recommmendation.html", ctx -> ctx.result("Hello world"));
+            //app.get("/recommmendation.html", ctx -> ctx.result("Hello world"));
         });
 
         System.out.println(ConnectionFactory.getConnection());
         BookDao bookDao = new BookDao();
+
+        List<BookEntity> bookList = new ArrayList<>();
+        bookList = bookDao.selectAll();
         
-        BookEntity checkBook = bookDao.select(31);
-        System.out.println(checkBook);
-        bookDao.delete(checkBook);
+        System.out.println(bookList);
 
     }
 }
