@@ -8,6 +8,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Homepage</title>
+    <style>
+     
+.select {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 80px;
+
+}
+.select {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+      
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
@@ -23,19 +42,27 @@
           </ul>
         </div>
       </nav>
-      
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <div class="container">
-        <select name="title" id="title">
-          <option value="Author">Author</option>
-          <option value="genre">Genre</option>
-          <option value="Year">Year</option>
-          <option value="Fiction">Fiction</option>
-        </select>
-        
-        <input type="text" placeholder="Book Search..">
-        
-        <input type="submit">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-group">
+           <div class="select" align="center"  >
+                <select  name="title" id="title">
+                  <option value="Tittle">Tittle</option> 
+                 <option value="Author">Author</option>
+                 <option value="genre">Genre</option>
+                 <option value="Year">Year</option>
+                 <option value="Fiction">Fiction</option>
+              </select>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text"  placeholder="Book Search..">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="submit">
+            </div>
+          </div>
+            </div>
+        </div>
       </div>
-    
 </body>
 </html>
