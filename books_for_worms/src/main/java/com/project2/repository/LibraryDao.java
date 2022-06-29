@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
-import com.project2.repository.entities.BookEntity;
+import com.project2.repository.entities.UserEntity;
 import com.project2.repository.entities.LibraryEntity;
 import com.project2.repository.interfaces.LibraryDaoInterface;
 import com.project2.util.ConnectionFactory;
@@ -20,23 +21,28 @@ public class LibraryDao implements LibraryDaoInterface {
     }
 
     @Override
-    public LibraryEntity select(int book_id) {
-        // TODO Auto-generated method stub
+    public List<LibraryEntity> select(UserEntity userEntity) {
         Connection connection = ConnectionFactory.getConnection();
-        String sql = "SELECT * FROM library WHERE book_id=? ;";
+        String sql = "SELECT * FROM library WHERE user_id=? ;";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, book_id);
+            preparedStatement.setInt(1, userEntity.getUser_id());
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
+            List<LibraryEntity> libraryList = new ArrayList<>();
+
             while (resultSet.next()) {
-                return new LibraryEntity(
+                LibraryEntity nextBook =  new LibraryEntity(
                         resultSet.getInt(1),
                         resultSet.getInt(2),
                         resultSet.getString(3));
+                
+                libraryList.add(nextBook);
             }
+
+            return libraryList;
 
         } catch (SQLException e) {
             e.printStackTrace();

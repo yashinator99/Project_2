@@ -8,6 +8,7 @@ import com.project2.repository.BookDao;
 import com.project2.repository.LibraryDao;
 import com.project2.repository.UserDao;
 import com.project2.repository.entities.BookEntity;
+import com.project2.repository.entities.LibraryEntity;
 import com.project2.repository.entities.UserEntity;
 import com.project2.util.ConnectionFactory;
 
@@ -36,12 +37,9 @@ public class App {
         });
 
         System.out.println(ConnectionFactory.getConnection());
-        BookDao bookDao = new BookDao();
-
-        Date HPyear = new Date(0);
-
-        //BookEntity newBook = new BookEntity(99 ,"HP", "JKR", "fantasy", HPyear, true, "YA story");
-        BookEntity updateBook = new BookEntity(33, "new book", "John Doe", "biography", HPyear, false, "new description");
+        UserEntity newUser = new UserEntity(2, "fake", "fake", "fake");
+        LibraryDao nLibraryDao = new LibraryDao();
+        System.out.print(nLibraryDao.select(newUser));
 
 
 
