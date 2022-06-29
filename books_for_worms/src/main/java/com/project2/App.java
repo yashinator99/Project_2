@@ -37,9 +37,9 @@ public class App {
         });
 
         System.out.println(ConnectionFactory.getConnection());
-        UserEntity newUser = new UserEntity(2, "fake", "fake", "fake");
-        LibraryDao nLibraryDao = new LibraryDao();
-        System.out.print(nLibraryDao.select(newUser));
+        UserDao newUserDao = new UserDao();
+        
+        newUserDao.delete(3);
 
 
 

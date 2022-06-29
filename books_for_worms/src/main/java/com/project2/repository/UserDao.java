@@ -88,4 +88,28 @@ public class UserDao implements UserDaoInterface {
 
         return null;
     }
+
+    
+    public void update(UserEntity userEntity){
+        return;
+    }
+
+    public void delete(int user_id){
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "DELETE FROM users WHERE user_id=?;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, user_id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                return;
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return;
+    }
 }
