@@ -1,7 +1,6 @@
 package com.project2;
 
 
-import java.time.LocalDate;
 import java.sql.Date;
 
 import com.project2.repository.BookDao;
@@ -37,10 +36,10 @@ public class App {
         BookDao bookDao = new BookDao();
         
         Date harryDate = new Date(0);
-        BookEntity harryBook = new BookEntity(99, "Harry Potter", "J.K. Rowling", "Fantasy", harryDate, true, "description");
+        BookEntity harryBook = new BookEntity("Harry Potter and the Chamber of Secrets", "J.K. Rowling", "Fantasy", harryDate, true, "Read it");
         System.out.println(harryBook);
         bookDao.insert(harryBook);
-        BookEntity checkBook = bookDao.select(99);
+        BookEntity checkBook = bookDao.select(32);
         System.out.println(checkBook);
 
 

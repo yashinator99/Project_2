@@ -15,17 +15,16 @@ public class BookDao implements BookDaoInterface {
     @Override
     public void insert(BookEntity bookEntity) {
         Connection connection = ConnectionFactory.getConnection();
-        String sql = "INSERT INTO books VALUES (?, ?, ?, ?, ?, ?, ?) ;";
+        String sql = "INSERT INTO books VALUES (default , ?, ?, ?, ?, ?, ?) ;";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, bookEntity.getBook_id());
-            preparedStatement.setString(2, bookEntity.getTitle());
-            preparedStatement.setString(3, bookEntity.getAuthor());
-            preparedStatement.setString(4, bookEntity.getGenre());
-            preparedStatement.setDate(5, bookEntity.getYear());
-            preparedStatement.setBoolean(6, bookEntity.isFiction());
-            preparedStatement.setString(7, bookEntity.getDescription());
+            preparedStatement.setString(1, bookEntity.getTitle());
+            preparedStatement.setString(2, bookEntity.getAuthor());
+            preparedStatement.setString(3, bookEntity.getGenre());
+            preparedStatement.setDate(4, bookEntity.getYear());
+            preparedStatement.setBoolean(5, bookEntity.isFiction());
+            preparedStatement.setString(6, bookEntity.getDescription());
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
