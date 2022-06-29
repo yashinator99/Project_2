@@ -39,7 +39,7 @@ public class App {
         System.out.println(ConnectionFactory.getConnection());
         BookDao newBook = new BookDao();
         
-        System.out.print(newBook.random());
+        System.out.print(newBook.select(10));
 
 
 
