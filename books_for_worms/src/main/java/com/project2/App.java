@@ -1,8 +1,12 @@
 package com.project2;
 
+import org.openqa.selenium.devtools.v85.emulation.model.UserAgentBrandVersion;
+
 import com.project2.repository.BookDao;
 import com.project2.repository.LibraryDao;
+import com.project2.repository.UserDao;
 import com.project2.repository.entities.BookEntity;
+import com.project2.repository.entities.UserEntity;
 import com.project2.util.ConnectionFactory;
 
 import io.javalin.Javalin;
@@ -37,6 +41,10 @@ public class App {
         System.out.println(bookEntity);
 
         System.out.println(libraryDao.select(bookEntity.getBook_id()));
+
+        UserEntity userEntity = new UserEntity("olivier_cook", "pass12345", "olivier@gmail.com");
+        UserDao userDao = new UserDao();
+        userDao.insert(userEntity);
 
     }
 }

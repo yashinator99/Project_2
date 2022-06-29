@@ -13,6 +13,12 @@ public class UserEntity {
         this.email = email;
     }
 
+    public UserEntity(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;

@@ -10,10 +10,30 @@ import com.project2.repository.entities.UserEntity;
 import com.project2.repository.interfaces.UserDaoInterface;
 import com.project2.util.ConnectionFactory;
 
-public class UserDao implements UserDaoInterface{
+public class UserDao implements UserDaoInterface {
 
     @Override
     public void insert(UserEntity userEntity) {
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "INSERT INTO users VALUES (default, ?, ?, ?) ;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            // preparedStatement.setInt(1, userEntity.getUser_id());
+            preparedStatement.setString(1, userEntity.getUsername());
+            preparedStatement.setString(2, userEntity.getPassword());
+            preparedStatement.setString(3, userEntity.getEmail());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                return;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return;
     }
 
@@ -24,7 +44,7 @@ public class UserDao implements UserDaoInterface{
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,user_id);
+            preparedStatement.setInt(1, user_id);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -44,14 +64,14 @@ public class UserDao implements UserDaoInterface{
     }
 
     @Override
-    public UserEntity select(String username, String password){
+    public UserEntity select(String username, String password) {
         Connection connection = ConnectionFactory.getConnection();
         String sql = "SELECT * FROM users WHERE user_name=? AND password=? ;";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,username);
-            preparedStatement.setString(2,password);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
