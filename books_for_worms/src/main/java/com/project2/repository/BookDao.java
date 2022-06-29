@@ -177,9 +177,10 @@ public class BookDao implements BookDaoInterface {
 
     public BookEntity search(String searchTerm){
         Connection connection = ConnectionFactory.getConnection();
-        String sql = "SELECT * FROM books WHERE title LIKE '%?%';";
+        String sql = "SELECT * FROM books WHERE title=?;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, searchTerm);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
