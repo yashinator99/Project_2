@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.project2.repository.entities.UserEntity;
@@ -89,6 +90,33 @@ public class UserDao implements UserDaoInterface {
         return null;
     }
 
+    public List<UserEntity> selectAll() {
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "SELECT * FROM users;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<UserEntity> userList = new ArrayList<>();
+
+            while (resultSet.next()){
+                UserEntity nextUser = new UserEntity(
+                    resultSet.getInt(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4));
+
+                userList.add(nextUser);
+            }
+
+            return userList;
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
     
     public void update(UserEntity userEntity){
         Connection connection = ConnectionFactory.getConnection();
