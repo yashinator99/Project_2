@@ -1,5 +1,6 @@
 package com.project2;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,10 +38,12 @@ public class App {
         System.out.println(ConnectionFactory.getConnection());
         BookDao bookDao = new BookDao();
 
-        List<BookEntity> bookList = new ArrayList<>();
-        bookList = bookDao.selectAll();
-        
-        System.out.println(bookList);
+        Date HPyear = new Date(0);
+
+        //BookEntity newBook = new BookEntity(99 ,"HP", "JKR", "fantasy", HPyear, true, "YA story");
+        BookEntity updateBook = new BookEntity(33, "new book", "John Doe", "biography", HPyear, false, "new description");
+
+
 
     }
 }
