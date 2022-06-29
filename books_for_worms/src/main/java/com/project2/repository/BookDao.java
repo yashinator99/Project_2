@@ -81,7 +81,22 @@ public class BookDao implements BookDaoInterface {
 
     @Override
     public void delete(BookEntity bookEntity) {
-        // TODO Auto-generated method stub
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "DELETE FROM books WHERE book_id=?;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, bookEntity.getBook_id());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                return;
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return;
 
     }
 

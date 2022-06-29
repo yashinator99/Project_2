@@ -11,8 +11,7 @@ public class BookEntity {
     private boolean fiction;
     private String description;
 
-    public BookEntity(String title, String author, String genre, Date year, boolean fiction,
-            String description) {
+    public BookEntity(String title, String author, String genre, Date year, boolean fiction, String description) {
         this.title = title;
         this.author = author;
         this.genre = genre;
@@ -20,10 +19,8 @@ public class BookEntity {
         this.fiction = fiction;
         this.description = description;
     }
-    
 
-    public BookEntity(int book_id, String title, String author, String genre, Date year, boolean fiction,
-            String description) {
+    public BookEntity(int book_id, String title, String author, String genre, Date year, boolean fiction, String description) {
         this.book_id = book_id;
         this.title = title;
         this.author = author;
