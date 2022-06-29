@@ -15,7 +15,7 @@ public class BookDao implements BookDaoInterface {
     @Override
     public void insert(BookEntity bookEntity) {
         Connection connection = ConnectionFactory.getConnection();
-        String sql = "INSERT INTO books (?, ?, ?, ?, ?, ?, ?) ;";
+        String sql = "INSERT INTO books VALUES (?, ?, ?, ?, ?, ?, ?) ;";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);

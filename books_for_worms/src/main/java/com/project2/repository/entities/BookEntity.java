@@ -11,6 +11,8 @@ public class BookEntity {
     private boolean fiction;
     private String description;
 
+    
+
     public BookEntity(int book_id, String title, String author, String genre, Date year, boolean fiction,
             String description) {
         this.book_id = book_id;

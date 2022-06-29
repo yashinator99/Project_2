@@ -1,5 +1,9 @@
 package com.project2;
 
+
+import java.time.LocalDate;
+import java.sql.Date;
+
 import com.project2.repository.BookDao;
 import com.project2.repository.LibraryDao;
 import com.project2.repository.entities.BookEntity;
@@ -31,12 +35,14 @@ public class App {
 
         System.out.println(ConnectionFactory.getConnection());
         BookDao bookDao = new BookDao();
-        LibraryDao libraryDao = new LibraryDao();
+        
+        Date harryDate = new Date(0);
+        BookEntity harryBook = new BookEntity(99, "Harry Potter", "J.K. Rowling", "Fantasy", harryDate, true, "description");
+        System.out.println(harryBook);
+        bookDao.insert(harryBook);
+        BookEntity checkBook = bookDao.select(99);
+        System.out.println(checkBook);
 
-        BookEntity bookEntity = bookDao.select(25);
-        System.out.println(bookEntity);
-
-        System.out.println(libraryDao.select(bookEntity.getBook_id()));
 
     }
 }
