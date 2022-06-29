@@ -33,15 +33,12 @@ public class App {
                 ctx.redirect("/homepage.html");
             });
 
-            //app.get("/recommmendation.html", ctx -> ctx.result("Hello world"));
+            BookDao newBookDao = new BookDao();
+
+            app.post("/homepage.html", ctx -> {
+                System.out.print(newBookDao.search(ctx.formParam("search")));
+            });
         });
-
-        System.out.println(ConnectionFactory.getConnection());
-        BookDao newBook = new BookDao();
-        
-        System.out.print(newBook.selectAll());
-
-
 
     }
 }
