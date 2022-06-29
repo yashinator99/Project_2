@@ -37,6 +37,7 @@ public class App {
 
             app.post("/homepage.html", ctx -> {
                 System.out.print(newBookDao.search(ctx.formParam("search")));
+                ctx.redirect("/homepage.html");
             });
         });
 
