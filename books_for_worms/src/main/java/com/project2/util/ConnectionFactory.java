@@ -13,7 +13,7 @@ public class ConnectionFactory {
         } else {
             try {
                 connection = DriverManager.getConnection(
-                        System.getenv("p2_db_url"),
+                        "jdbc:postgresql://project-2.ch0i3nfkajfb.us-east-1.rds.amazonaws.com/postgres",
                         System.getenv("p2_db_username"),
                         System.getenv("p2_db_password"));
                 return connection;
