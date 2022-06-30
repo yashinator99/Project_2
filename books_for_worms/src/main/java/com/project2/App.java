@@ -36,8 +36,22 @@ public class App {
             BookDao newBookDao = new BookDao();
 
             app.post("/homepage.html", ctx -> {
-                System.out.print(newBookDao.search(ctx.formParam("select"), ctx.formParam("search")));
-                ctx.redirect("/homepage.html");
+                String searchCategory = ctx.formParam("select");
+                String searchTerm = ctx.formParam("search");
+                int bookID = 0;
+                if (newBookDao.search(searchCategory, searchTerm) != null){
+                    bookID = newBookDao.search(searchCategory, searchTerm).getBook_id();
+                }
+                ctx.redirect("/book/" + bookID);
+            });
+
+            app.get("/book/{name}", ctx -> {
+                BookEntity foundBook = newBookDao.search(Integer.parseInt((ctx.pathParam("name"))));
+                if (foundBook != null){
+                    ctx.result(foundBook.getTitle());
+                } else{
+                    ctx.result("No book found with that criteria");
+                }
             });
         });
 
