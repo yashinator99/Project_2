@@ -31,11 +31,15 @@ public class App {
             path("register", () -> {
                 get("/", UserController.registerHandler);
             });
-            
+
             path("/", () -> {
                 get("", ctx -> {
                     ctx.redirect("homepage.html");
                 });
+            });
+
+            path("login", () -> {
+                get("/login", UserController.registerHandler);
             });
 
             BookDao newBookDao = new BookDao();
@@ -43,7 +47,7 @@ public class App {
                 post("", ctx -> {
                     String searchCategory = ctx.formParam("select");
                     String searchTerm = ctx.formParam("search");
-                    
+
                     if (newBookDao.search(searchCategory, searchTerm) != null){
                         BookEntity foundBook = newBookDao.search(searchCategory, searchTerm);
                         ctx.json(foundBook);
@@ -56,7 +60,7 @@ public class App {
 
         });
 
-        
+
 /*
         app.get("/", ctx -> {
             ctx.redirect("/homepage.html");
@@ -68,7 +72,7 @@ public class App {
                 post("", ctx -> {
                     String searchCategory = ctx.formParam("select");
                     String searchTerm = ctx.formParam("search");
-                    
+
                     if (newBookDao.search(searchCategory, searchTerm) != null){
                         BookEntity foundBook = newBookDao.search(searchCategory, searchTerm);
                         ctx.json(foundBook);
@@ -77,7 +81,7 @@ public class App {
                     }
                 });
             });
-        });            
+        });
  */
     }
 }
