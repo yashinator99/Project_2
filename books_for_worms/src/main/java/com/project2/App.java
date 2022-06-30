@@ -51,7 +51,12 @@ public class App {
                     }
                 });
             });
+
+            path("/register.html", () -> {
+                post("", ctx -> {
+                    get(UserController.registerHandler);
+                });
         });            
 
-    }
+    });
 }
