@@ -46,12 +46,14 @@ public class App {
             });
 
             app.get("/book/{name}", ctx -> {
-                BookEntity foundBook = newBookDao.search(Integer.parseInt((ctx.pathParam("name"))));
-                if (foundBook != null){
-                    ctx.result(foundBook.getTitle());
-                } else{
+                try{
+                    int bookID = Integer.parseInt((ctx.pathParam("name")));
+                    BookEntity foundBook = newBookDao.search(bookID);
+                    ctx.json(foundBook);
+
+                } catch (Exception e){
                     ctx.result("No book found with that criteria");
-                }
+                };
             });
         });
 
