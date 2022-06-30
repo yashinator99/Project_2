@@ -51,6 +51,7 @@ public class App {
                 ctx.json(randomBook);
             });
 
+            /*
             app.get("/book/{name}", ctx -> {
                 try{
                     String book = ctx.pathParam("name");
@@ -58,11 +59,12 @@ public class App {
                     BookEntity foundBook = newBookDao.search(bookID);
                     ctx.json(foundBook);
 
-                } catch (final NumberFormatException e){
+                } catch (Exception e){
                     e.printStackTrace();
                     ctx.result("No book found with that criteria");
                 };
             });
+             */
         });
 
     }
