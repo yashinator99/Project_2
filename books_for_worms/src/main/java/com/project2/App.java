@@ -81,7 +81,21 @@ public class App {
                     }
                 });
             });
+<<<<<<< HEAD
         });
+=======
+
+            path("/register.html", () -> {
+                post("", ctx -> {
+                    get(UserController.registerHandler);
+                });
+        });            
+<<<<<<< HEAD
+
+    });
+=======
+>>>>>>> 30c597b34fda350a31c3e0be83f9d450d12776fa
  */
     }
+>>>>>>> 55239bab31ea4c9c220c30059e915d6b88e6cbb8
 }
