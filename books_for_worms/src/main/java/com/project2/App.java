@@ -45,6 +45,11 @@ public class App {
                 ctx.redirect("/book/" + bookID);
             });
 
+            app.get("/recommendation.html", ctx -> {
+                int bookID = newBookDao.random().getBook_id();
+                ctx.redirect("/book/" + bookID);
+            });
+
             app.get("/book/{name}", ctx -> {
                 try{
                     int bookID = Integer.parseInt((ctx.pathParam("name")));
