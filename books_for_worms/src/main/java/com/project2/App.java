@@ -12,10 +12,6 @@ import com.project2.repository.entities.BookEntity;
 import com.project2.repository.entities.LibraryEntity;
 import com.project2.repository.entities.UserEntity;
 import com.project2.util.ConnectionFactory;
-<<<<<<< HEAD
-=======
-
->>>>>>> ec18f575654b24ae29dc3ddf68f5d1367fa290d7
 import static io.javalin.apibuilder.ApiBuilder.*;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
@@ -31,40 +27,37 @@ public class App {
                 });
         app.start(9090);
 
-<<<<<<< HEAD
         app.routes( () -> {
             path("register", () -> {
-                app.get("/", UserController.registerHandler);
+                get("/", UserController.registerHandler);
             });
             
-        app.routes(() -> {
-            app.get("/", ctx -> {
-                ctx.redirect("/homepage.html");
+            path("/", () -> {
+                get("", ctx -> {
+                    ctx.redirect("homepage.html");
+                });
             });
 
             BookDao newBookDao = new BookDao();
-
-            app.post("/homepage.html", ctx -> {
-                String searchCategory = ctx.formParam("select");
-                String searchTerm = ctx.formParam("search");
-                
-                if (newBookDao.search(searchCategory, searchTerm) != null){
-                    BookEntity foundBook = newBookDao.search(searchCategory, searchTerm);
-                    ctx.json(foundBook);
-                } else{
-                    ctx.json("No book found with that criteria");
-                }
-            });
-
-            app.get("/recommendation.html", ctx -> {
-                BookEntity randomBook = newBookDao.random();
-                ctx.json(randomBook);
+            path("/homepage.html", () -> {
+                post("", ctx -> {
+                    String searchCategory = ctx.formParam("select");
+                    String searchTerm = ctx.formParam("search");
+                    
+                    if (newBookDao.search(searchCategory, searchTerm) != null){
+                        BookEntity foundBook = newBookDao.search(searchCategory, searchTerm);
+                        ctx.json(foundBook);
+                    } else{
+                        ctx.json("No book found with that criteria");
+                    }
+                });
             });
 
 
         });
-=======
 
+        
+/*
         app.get("/", ctx -> {
             ctx.redirect("/homepage.html");
         });
@@ -85,7 +78,6 @@ public class App {
                 });
             });
         });            
-
->>>>>>> ec18f575654b24ae29dc3ddf68f5d1367fa290d7
+ */
     }
 }
