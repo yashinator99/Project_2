@@ -12,16 +12,12 @@ import com.project2.repository.entities.BookEntity;
 import com.project2.repository.entities.LibraryEntity;
 import com.project2.repository.entities.UserEntity;
 import com.project2.util.ConnectionFactory;
-
 import static io.javalin.apibuilder.ApiBuilder.*;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
     public static void main(String[] args) {
 
@@ -31,7 +27,37 @@ public class App {
                 });
         app.start(9090);
 
+        app.routes( () -> {
+            path("register", () -> {
+                get("/", UserController.registerHandler);
+            });
+            
+            path("/", () -> {
+                get("", ctx -> {
+                    ctx.redirect("homepage.html");
+                });
+            });
 
+            BookDao newBookDao = new BookDao();
+            path("/homepage.html", () -> {
+                post("", ctx -> {
+                    String searchCategory = ctx.formParam("select");
+                    String searchTerm = ctx.formParam("search");
+                    
+                    if (newBookDao.search(searchCategory, searchTerm) != null){
+                        BookEntity foundBook = newBookDao.search(searchCategory, searchTerm);
+                        ctx.json(foundBook);
+                    } else{
+                        ctx.json("No book found with that criteria");
+                    }
+                });
+            });
+
+
+        });
+
+        
+/*
         app.get("/", ctx -> {
             ctx.redirect("/homepage.html");
         });
@@ -57,6 +83,11 @@ public class App {
                     get(UserController.registerHandler);
                 });
         });            
+<<<<<<< HEAD
 
     });
+=======
+ */
+    }
+>>>>>>> 55239bab31ea4c9c220c30059e915d6b88e6cbb8
 }
