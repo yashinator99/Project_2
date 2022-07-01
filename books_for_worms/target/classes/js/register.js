@@ -7,7 +7,7 @@ const email = form.elements["email"];
 form.addEventListener('submit', (event) => {
 
     event.preventDefault();
-//getting the element value's 
+//getting the element value's
     let username_value = username.value;
     let password_value = password.value;
     let email_value = email.value;

@@ -14,8 +14,8 @@ public class App {
 
         Javalin app = Javalin.create(
             config -> {
-                config.addStaticFiles("src/main/resources/templates", Location.EXTERNAL);
-                config.addStaticFiles("src/main/resources/js", Location.EXTERNAL);
+                config.addStaticFiles("/templates", Location.CLASSPATH);
+                config.addStaticFiles("/js", Location.CLASSPATH);
             }
         );
 
@@ -42,40 +42,35 @@ public class App {
                     }
                 });
             });
-<<<<<<< HEAD
-
-=======
->>>>>>> eb78757d3057d83a25c4249b842108aea1126988
 
             path("base", () -> {
-                post("", ctx -> {
+                    get("", ctx -> {
                     get(HomeController.homepage);
                 });
 
             });
             path("register", () -> {
-                post("", ctx -> {
                     get(UserController.registerHandler);
                     post(UserController.registerHandler);
                 });
 
             });
 
-            path("/login", () -> {
+            path("login", () -> {
                 get(UserController.loginHandler);
                 /*post("", ctx -> {
                     get(UserController.loginHandler);
                 });*/
             });
 
-            path("/login/submit", () -> {
+            path("login/submit", () -> {
                 get(UserController.loginHandler);
             });
 
-        });
-
         }
-    }
+    };
+
+
 
 
 
