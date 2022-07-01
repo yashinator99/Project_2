@@ -13,9 +13,7 @@ public class UserController {
 
     };
 
-    public static Handler homeHandler = ctx -> {
-        ctx.redirect("/homepage.html");
-    };
+
 
     public static Handler loginHandler = ctx -> {
         ctx.redirect("/login.html");
