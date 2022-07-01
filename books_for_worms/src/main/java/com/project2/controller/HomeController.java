@@ -8,6 +8,6 @@ public class HomeController {
         ctx.redirect("base.html");
     } ;
     public static Handler homeHandler = ctx -> {
-        ctx.redirect("/homepage.html");
+        ctx.redirect("homepage.html");
     };
 }
