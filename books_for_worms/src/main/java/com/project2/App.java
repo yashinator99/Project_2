@@ -44,20 +44,19 @@ public class App {
             });
 
             path("base", () -> {
-                post("", ctx -> {
+                    get("", ctx -> {
                     get(HomeController.homepage);
                 });
 
             });
             path("register", () -> {
-                post("", ctx -> {
                     get(UserController.registerHandler);
                     post(UserController.registerHandler);
                 });
 
             });
 
-            path("/login", () -> {
+            path("login", () -> {
                 get(UserController.loginHandler);
                 /*post("", ctx -> {
                     get(UserController.loginHandler);
@@ -68,10 +67,10 @@ public class App {
                 post(UserController.loginsubmitHandler);
             });
 
-        });
-
         }
-    }
+    };
+
+
 
 
 
