@@ -38,7 +38,7 @@ public class LibraryDao implements LibraryDaoInterface {
                         resultSet.getInt(1),
                         resultSet.getInt(2),
                         resultSet.getString(3));
-                
+
                 libraryList.add(nextBook);
             }
 

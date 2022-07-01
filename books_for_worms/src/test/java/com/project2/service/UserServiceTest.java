@@ -11,9 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.project2.models.User;
 import com.project2.models.UserModel;
-
 import com.project2.repository.UserDao;
 import com.project2.repository.entities.UserEntity;
 

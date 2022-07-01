@@ -96,7 +96,7 @@ public class UserDao implements UserDaoInterface {
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
             List<UserEntity> userList = new ArrayList<>();
@@ -117,7 +117,7 @@ public class UserDao implements UserDaoInterface {
         }
         return null;
     }
-    
+
     public void update(UserEntity userEntity){
         Connection connection = ConnectionFactory.getConnection();
         String sql = "UPDATE users SET user_name=?, password=?, email=? WHERE user_id=? ;";
