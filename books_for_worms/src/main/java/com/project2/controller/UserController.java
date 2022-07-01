@@ -13,5 +13,10 @@ public class UserController {
 
     };
 
+
+
+    public static Handler loginHandler = ctx -> {
+        ctx.redirect("/login.html");
+    };
 }
 

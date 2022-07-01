@@ -1,5 +1,6 @@
 package com.project2;
 
+import com.project2.controller.HomeController;
 import com.project2.controller.UserController;
 import com.project2.repository.BookDao;
 import com.project2.repository.entities.BookEntity;
@@ -14,6 +15,7 @@ public class App {
         Javalin app = Javalin.create(
             config -> {
                 config.addStaticFiles("books_for_worms/src/main/resources/templates", Location.EXTERNAL);
+                config.addStaticFiles("books_for_worms/src/main/resources/js", Location.EXTERNAL);
             }
         );
 
@@ -40,14 +42,33 @@ public class App {
                     }
                 });
             });
-        });
-
+            /*path("/", () -> {
+                get(HomeController.homeHandler);
+            });*/
 
             path("register.html", () -> {
                 post("", ctx -> {
                     get(UserController.registerHandler);
                 });
+
+            });
+
+            path("/login", () -> {
+                get(UserController.loginHandler);
+                /*post("", ctx -> {
+                    get(UserController.loginHandler);
+                });*/
+
+            });
+            path("/login/submit", () -> {
+                get(UserController.loginHandler);
+            });
+
         });
+
+
+
+
     }
 
 }
