@@ -14,8 +14,8 @@ public class App {
 
         Javalin app = Javalin.create(
             config -> {
-                config.addStaticFiles("books_for_worms/src/main/resources/templates", Location.EXTERNAL);
-                config.addStaticFiles("books_for_worms/src/main/resources/js", Location.EXTERNAL);
+                config.addStaticFiles("src/main/resources/templates", Location.EXTERNAL);
+                config.addStaticFiles("src/main/resources/js", Location.EXTERNAL);
             }
         );
 
@@ -46,7 +46,7 @@ public class App {
                 get(HomeController.homeHandler);
             });*/
 
-            path("register.html", () -> {
+            path("register", () -> {
                 post("", ctx -> {
                     get(UserController.registerHandler);
                 });

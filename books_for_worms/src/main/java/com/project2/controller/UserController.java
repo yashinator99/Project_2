@@ -10,7 +10,7 @@ public class UserController {
     private static UserService userService = new UserService(new UserDao());
 
     public static Handler registerHandler = ctx -> {
-
+        ctx.redirect("register.html");
     };
 
 
