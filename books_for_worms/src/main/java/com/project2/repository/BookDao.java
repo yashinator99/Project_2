@@ -75,7 +75,7 @@ public class BookDao implements BookDaoInterface {
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
             List<BookEntity> bookList = new ArrayList<>();
@@ -151,7 +151,7 @@ public class BookDao implements BookDaoInterface {
     public BookEntity random(){
         Connection connection = ConnectionFactory.getConnection();
         String sql = "SELECT * FROM books ORDER by random() LIMIT 1;";
-        
+
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 

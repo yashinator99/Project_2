@@ -21,7 +21,7 @@ public class App {
 
         app.start(9090);
 
-        // app.get("/", HomeController.homepage);
+
 
         app.get("/", ctx -> {
             ctx.redirect("homepage.html");
@@ -42,13 +42,17 @@ public class App {
                     }
                 });
             });
-            /*path("/", () -> {
-                get(HomeController.homeHandler);
-            });*/
 
+            path("base", () -> {
+                post("", ctx -> {
+                    get(HomeController.homepage);
+                });
+
+            });
             path("register", () -> {
                 post("", ctx -> {
                     get(UserController.registerHandler);
+                    post(UserController.registerHandler);
                 });
 
             });
@@ -66,11 +70,11 @@ public class App {
 
         });
 
-
-
-
+        }
     }
 
-}
+
+
+
 
 
