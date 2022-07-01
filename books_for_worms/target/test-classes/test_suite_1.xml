@@ -1,0 +1,7 @@
+<suite name="Basic Suite">
+    <test name="Basic Test">
+        <classes>
+            <class name="com.project2.BasicTest" />
+        </classes>
+    </test>
+</suite>

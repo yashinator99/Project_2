@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Basic Suite" duration-ms="35" started-at="2022-06-30T20:06:13 EDT" finished-at="2022-06-30T20:06:13 EDT">
+    <groups>
+    </groups>
+    <test name="Basic Test" duration-ms="35" started-at="2022-06-30T20:06:13 EDT" finished-at="2022-06-30T20:06:13 EDT">
+      <class name="com.project2.BasicTest">
+        <test-method status="PASS" signature="testBasicTest()[pri:0, instance:com.project2.BasicTest@87f383f]" name="testBasicTest" duration-ms="6" started-at="2022-06-30T20:06:13 EDT" finished-at="2022-06-30T20:06:13 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBasicTest -->
+      </class> <!-- com.project2.BasicTest -->
+    </test> <!-- Basic Test -->
+  </suite> <!-- Basic Suite -->
+</testng-results>

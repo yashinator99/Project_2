@@ -82,7 +82,7 @@
         <version>3.0.0-M6</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>src/test/resources/test_service_suite.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/test_suite_1.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
