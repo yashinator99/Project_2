@@ -42,9 +42,7 @@ public class App {
                     }
                 });
             });
-            /*path("/", () -> {
-                get(HomeController.homeHandler);
-            });*/
+
 
             path("register", () -> {
                 post("", ctx -> {
@@ -58,8 +56,8 @@ public class App {
                 /*post("", ctx -> {
                     get(UserController.loginHandler);
                 });*/
-
             });
+
             path("/login/submit", () -> {
                 get(UserController.loginHandler);
             });
