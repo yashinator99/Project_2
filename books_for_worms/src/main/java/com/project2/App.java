@@ -28,9 +28,9 @@ public class App {
         app.start(9090);
 
 
-        app.get("/", ctx -> {
+        /*app.get("/", ctx -> {
             ctx.redirect("/homepage.html");
-        });
+        }); */
 
         app.routes(() -> {
             BookDao newBookDao = new BookDao();
@@ -47,15 +47,35 @@ public class App {
                     }
                 });
             });
-
-        });
-
+            path("/", () -> {
+                get(UserController.homeHandler);
+            });
 
             path("/register.html", () -> {
                 post("", ctx -> {
                     get(UserController.registerHandler);
                 });
-        });            
+
+            });
+
+            path("/login", () -> {
+                get(UserController.loginHandler);
+                /*post("", ctx -> {
+                    get(UserController.loginHandler);
+                });*/
+
+            });
+            path("/login/submit", () -> {
+                get(UserController.loginHandler);
+                /*post("", ctx -> {
+                    get(UserController.loginHandler);
+                });*/
+
+            });
+        });
+
+
+
 
     }
 }
