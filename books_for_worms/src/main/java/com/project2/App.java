@@ -21,15 +21,9 @@ public class App {
 
         // app.get("/", HomeController.homepage);
 
-<<<<<<< HEAD
         /*app.get("/", ctx -> {
             ctx.redirect("/homepage.html");
         }); */
-=======
-        app.get("/", ctx -> {
-            ctx.redirect("homepage.html");
-        });
->>>>>>> d167e779b352af6244e7b5a6ee8d797bcb50bf26
 
         app.routes(() -> {
             BookDao newBookDao = new BookDao();
@@ -46,20 +40,14 @@ public class App {
                     }
                 });
             });
-<<<<<<< HEAD
             path("/", () -> {
                 get(UserController.homeHandler);
             });
-=======
-        });
-
->>>>>>> d167e779b352af6244e7b5a6ee8d797bcb50bf26
 
             path("register.html", () -> {
                 post("", ctx -> {
                     get(UserController.registerHandler);
                 });
-<<<<<<< HEAD
 
             });
 
@@ -82,9 +70,6 @@ public class App {
 
 
 
-=======
-        });
->>>>>>> d167e779b352af6244e7b5a6ee8d797bcb50bf26
     }
 
 }
