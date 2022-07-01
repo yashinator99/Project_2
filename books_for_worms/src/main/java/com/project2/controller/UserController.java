@@ -1,6 +1,7 @@
 package com.project2.controller;
 
 import io.javalin.http.Handler;
+import com.project2.service.UserService;
 
 public class UserController {
 
@@ -34,6 +35,19 @@ public class UserController {
 
     public static Handler loginHandler = ctx -> {
         ctx.redirect("/login.html");
+    };
+
+    public static Handler loginsubmitHandler = ctx -> {
+        System.out.println("test in loginsubmithandler");
+        System.out.println(ctx.formParam("username") + " " + ctx.formParam("password"));
+        UserService srv = new UserService();
+        int userId = srv.get_user_id(ctx.formParam("username"), ctx.formParam("password"));
+        if(userId != -1) {
+            ctx.redirect("/");
+        } else {
+            ctx.redirect("/login");
+        }
+
     };
 }
 
