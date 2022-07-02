@@ -21,7 +21,8 @@ form.addEventListener('submit', (event) => {
     let passwordVal = password.value;
     console.log("username: " + usernameVal);
     console.log("password: " + passwordVal);
-    post("/login/submit", form, "post")
+    let userid = post("/login/submit", form, "post");
+    console.log(userid);
     //window.location.href="login/submit";
 });
 

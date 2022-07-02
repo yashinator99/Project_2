@@ -43,12 +43,13 @@ public class App {
                 });
             });
 
-            path("base", () -> {
-                    get("", ctx -> {
-                    get(HomeController.homepage);
-                });
 
+            path("/", () -> {
+                get(HomeController.homeHandler);
             });
+
+
+
             path("register", () -> {
                     get(UserController.registerHandler);
                     post(UserController.registerHandler);

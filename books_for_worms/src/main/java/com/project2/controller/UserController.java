@@ -49,6 +49,7 @@ public class UserController {
     };
 
     public static Handler loginHandler = ctx -> {
+
         ctx.redirect("login.html");
     };
 
@@ -58,7 +59,8 @@ public class UserController {
         UserService srv = new UserService();
         int userId = srv.get_user_id(ctx.formParam("username"), ctx.formParam("password"));
         if(userId != -1) {
-            ctx.redirect("/");
+            ctx.cookieStore("user_id", userId);
+            ctx.result(""+userId);
         } else {
             ctx.redirect("/login");
         }
