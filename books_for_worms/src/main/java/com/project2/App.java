@@ -16,6 +16,7 @@ public class App {
             config -> {
                 config.addStaticFiles("/templates", Location.CLASSPATH);
                 config.addStaticFiles("/js", Location.CLASSPATH);
+                config.addStaticFiles("/css", Location.CLASSPATH);
             }
         );
 
@@ -44,32 +45,35 @@ public class App {
             });
 
 
-            path("/", () -> {
+            /*path("/", () -> {
                 get(HomeController.homeHandler);
-            });
+            });*/
 
 
 
             path("register", () -> {
-                    get(UserController.registerHandler);
-                    post(UserController.registerHandler);
-                });
-
+                get(UserController.registerHandler);
+                post(UserController.registerHandler);
             });
 
-            path("login", () -> {
+            path("/login", () -> {
                 get(UserController.loginHandler);
-                /*post("", ctx -> {
-                    get(UserController.loginHandler);
-                });*/
             });
 
             path("/login/submit", () -> {
                 post(UserController.loginsubmitHandler);
             });
 
-        }
-    };
+            path("/signout", () -> {
+                get(UserController.signoutHandler);
+            });
+
+        });
+
+
+
+    }
+};
 
 
 
