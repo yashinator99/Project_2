@@ -38,7 +38,7 @@ public class UserServiceTest{
     @BeforeClass
     public void setup(){
         MockitoAnnotations.openMocks(this);
-        this.userService = new UserService(UserDao);
+        this.userService = new UserService();
         dummyUser1 = new UserEntity("john","pass1234","john@gmail.com");
         dummyUser1 = new UserEntity("deo","pass","deo@gmail.com");
         when(mockUserDao.select(dummyUser1.getUser_id())).thenReturn(dummyUser1);
