@@ -201,6 +201,33 @@ public class BookDao implements BookDaoInterface {
         return null;
     }
 
+    public List<BookEntity> searchAllBooks(String column, String searchTerm){
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "SELECT * FROM books WHERE UPPER(" + column  + ") LIKE UPPER(?);";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, "%" + searchTerm + "%");
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            List<BookEntity> lstOfBooks = new ArrayList<BookEntity>();
+            while (resultSet.next()){
+                BookEntity nextBook = new BookEntity(
+                    resultSet.getInt("book_id"),
+                    resultSet.getString("title"),
+                    resultSet.getString("author"),
+                    resultSet.getString("genre"),
+                    resultSet.getDate("year"),
+                    resultSet.getBoolean("fiction"),
+                    resultSet.getString("description"));
+                lstOfBooks.add(nextBook);
+            }
+            return lstOfBooks;
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public BookEntity search(int searchTerm){
         Connection connection = ConnectionFactory.getConnection();
         String sql = "SELECT * FROM books WHERE book_id =?;";

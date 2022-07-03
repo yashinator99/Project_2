@@ -2,8 +2,6 @@ package com.project2;
 
 import com.project2.controller.HomeController;
 import com.project2.controller.UserController;
-import com.project2.repository.BookDao;
-import com.project2.repository.entities.BookEntity;
 import static io.javalin.apibuilder.ApiBuilder.*;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
@@ -29,27 +27,14 @@ public class App {
         });
 
         app.routes(() -> {
-            BookDao newBookDao = new BookDao();
-            path("homepage.html", () -> {
-                post("", ctx -> {
-                    String searchCategory = ctx.formParam("select");
-                    String searchTerm = ctx.formParam("search");
-
-                    if (newBookDao.search(searchCategory, searchTerm) != null){
-                        BookEntity foundBook = newBookDao.search(searchCategory, searchTerm);
-                        ctx.json(foundBook);
-                    } else{
-                        ctx.json("No book found with that criteria");
-                    }
-                });
-            });
-
-
             /*path("/", () -> {
                 get(HomeController.homeHandler);
             });*/
 
 
+            path("/homepage/search", () -> {
+                post(HomeController.homepageSeachHandler);
+            });
 
             path("register", () -> {
                 get(UserController.registerHandler);

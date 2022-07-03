@@ -2,9 +2,10 @@ package com.project2.controller;
 
 import com.project2.repository.UserDao;
 import com.project2.repository.entities.UserEntity;
+import com.project2.service.UserService;
 
 import io.javalin.http.Handler;
-import com.project2.service.UserService;
+
 
 public class UserController {
 
