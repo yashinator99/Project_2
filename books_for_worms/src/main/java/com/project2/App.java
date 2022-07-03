@@ -10,86 +10,69 @@ import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 
 public class App {
+    public static void main(String[] args) {
 
-  public static void main(String[] args) {
-    Javalin app = Javalin.create(
-      config -> {
-        config.addStaticFiles("/templates", Location.CLASSPATH);
-        config.addStaticFiles("/js", Location.CLASSPATH);
-      }
-    );
 
-    app.start(9090);
-
-    app.get(
-      "/",
-      ctx -> {
-        ctx.redirect("homepage.html");
-      }
-    );
-
-    app.routes(
-      () -> {
-        BookDao newBookDao = new BookDao();
-        path(
-          "homepage.html",
-          () -> {
-            post(
-              "",
-              ctx -> {
-                String searchCategory = ctx.formParam("select");
-                String searchTerm = ctx.formParam("search");
-
-                if (newBookDao.search(searchCategory, searchTerm) != null) {
-                  BookEntity foundBook = newBookDao.search(
-                    searchCategory,
-                    searchTerm
-                  );
-                  ctx.json(foundBook);
-                } else {
-                  ctx.json("No book found with that criteria");
-                }
-              }
-            );
-          }
+        Javalin app = Javalin.create(
+            config -> {
+                config.addStaticFiles("/templates", Location.CLASSPATH);
+                config.addStaticFiles("/js", Location.CLASSPATH);
+                config.addStaticFiles("/css", Location.CLASSPATH);
+            }
         );
 
-        path(
-          "base",
-          () -> {
-            get(
-              "",
-              ctx -> {
-                get(HomeController.homepage);
-              }
-            );
-          }
-        );
-        path(
-          "register",
-          () -> {
-            get(UserController.registerHandler);
-            post(UserController.registerHandler);
-          }
-        );
-      }
-    );
+        app.start(9090);
 
-    path(
-      "login",
-      () -> {
-        get(UserController.loginHandler);
-        /*post("", ctx -> {
-                    get(UserController.loginHandler);
-                });*/
-      }
-    );
+        app.get("/", ctx -> {
+            ctx.redirect("homepage.html");
+        });
 
-    path(
-      "/login/submit",
-      () -> {
-        post(UserController.loginsubmitHandler);
-      }
-    );
-  }
-}
+        app.routes(() -> {
+            BookDao newBookDao = new BookDao();
+            path("homepage.html", () -> {
+                post("", ctx -> {
+                    String searchCategory = ctx.formParam("select");
+                    String searchTerm = ctx.formParam("search");
+
+                    if (newBookDao.search(searchCategory, searchTerm) != null){
+                        BookEntity foundBook = newBookDao.search(searchCategory, searchTerm);
+                        ctx.json(foundBook);
+                    } else{
+                        ctx.json("No book found with that criteria");
+                    }
+                });
+            });
+
+
+            /*path("/", () -> {
+                get(HomeController.homeHandler);
+            });*/
+
+
+
+            path("register", () -> {
+                get(UserController.registerHandler);
+                post(UserController.registerHandler);
+            });
+
+            path("/login", () -> {
+                get(UserController.loginHandler);
+            });
+
+            path("/login/submit", () -> {
+                post(UserController.loginsubmitHandler);
+            });
+
+            path("/signout", () -> {
+                get(UserController.signoutHandler);
+            });
+
+        });
+
+
+
+    }
+};
+
+
+

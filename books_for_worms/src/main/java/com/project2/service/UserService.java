@@ -24,6 +24,7 @@ public class UserService {
             System.out.println("UserService" + uidentity);
             return uidentity.getUser_id();
         } else {
+            System.out.println("UserService failed" + uidentity);
             return -1;
         }
     }
