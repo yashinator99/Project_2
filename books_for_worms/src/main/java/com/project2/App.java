@@ -1,14 +1,15 @@
 package com.project2;
 
+import static io.javalin.apibuilder.ApiBuilder.*;
+
 import com.project2.controller.HomeController;
 import com.project2.controller.UserController;
-import static io.javalin.apibuilder.ApiBuilder.*;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 
-
 public class App {
     public static void main(String[] args) {
+
 
         Javalin app = Javalin.create(
             config -> {
@@ -19,8 +20,6 @@ public class App {
         );
 
         app.start(9090);
-
-
 
         app.get("/", ctx -> {
             ctx.redirect("homepage.html");
@@ -59,11 +58,6 @@ public class App {
 
     }
 };
-
-
-
-
-
 
 
 
