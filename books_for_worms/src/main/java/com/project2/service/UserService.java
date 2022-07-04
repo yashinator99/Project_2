@@ -9,12 +9,6 @@ import com.project2.repository.entities.UserEntity;
 
 public class UserService {
 
-    public UserService() {
-    }
-
-    public Object insert(String username, String password, String email) {
-        return null;
-    }
 
     public int get_user_id(String username, String password) {
         UserDao uid = new UserDao();

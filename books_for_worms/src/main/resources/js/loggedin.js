@@ -7,6 +7,7 @@ window.onload = function() {
         const navlogin = document.getElementById("login_nav");
         const navregister = document.getElementById("register_nav");
         const navsignout = document.getElementById("signout_nav");
+        const navlibraby = document.getElementById("library_nav");
         if(cookieValue == null || cookieValue == undefined || cookieValue == "") {
             console.log("cookie does not exist");
             if(navlogin !== undefined && navlogin !== null) {
@@ -17,6 +18,9 @@ window.onload = function() {
             }
             if(navsignout !== undefined && navsignout !== null) {
                 navsignout.classList.add("hide");
+            }
+            if(navlibraby !== undefined && navlibraby !== null) {
+                navlibraby.classList.add("hide");
             }
         } else {
             console.log("cookie " + cookieValue);
@@ -29,6 +33,9 @@ window.onload = function() {
             }
             if(navsignout !== undefined && navsignout !== null) {
                 navsignout.classList.remove("hide");
+            }
+            if(navlibraby !== undefined && navlibraby !== null) {
+                navlibraby.classList.remove("hide");
             }
         }
     }

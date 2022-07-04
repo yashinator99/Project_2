@@ -2,3 +2,32 @@
     display: none;
 }
 
+#homepage_disp, #library_disp{
+    margin: auto;
+    width: 80%;
+    padding-top: 50px;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #696969;
+    color: white;
+  }

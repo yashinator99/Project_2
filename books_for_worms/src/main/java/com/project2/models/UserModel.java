@@ -12,6 +12,8 @@ public class UserModel {
         this.password = password;
         this.email = email;
     }
+    public UserModel(String username, String password, String email) {
+    }
     @Override
     public int hashCode() {
         final int prime = 31;

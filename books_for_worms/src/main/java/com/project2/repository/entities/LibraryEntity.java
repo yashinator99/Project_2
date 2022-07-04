@@ -5,6 +5,12 @@ public class LibraryEntity {
     private int book_id;
     private String reading_status;
 
+    public LibraryEntity(int user_id, int book_id) {
+        this.user_id = user_id;
+        this.book_id = book_id;
+        this.reading_status = "Wanting to Read";
+    }
+
     public LibraryEntity(int user_id, int book_id, String reading_status) {
         this.user_id = user_id;
         this.book_id = book_id;
