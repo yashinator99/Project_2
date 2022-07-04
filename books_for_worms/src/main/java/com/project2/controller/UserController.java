@@ -19,7 +19,7 @@ public class UserController {
         String email = ctx.formParam("email");
         UserService usersvc = new UserService();
         System.out.println(username + password + email);
-        if (username != null && password != null && email != null){
+        if (username != "" && password != "" && email != ""){
             usersvc.creating_user(username, password, email);
             ctx.status(200);
         }else{
