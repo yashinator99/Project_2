@@ -30,7 +30,7 @@
       </div>
     </nav>
 
-    <form method="post" id="bookSearch" class="w-50 mx-auto">
+    <form id="bookSearch" class="w-50 mx-auto" action="#">
       <div class="form-row align-items-center">
         <div class="col-sm-2">
           <select class="form-control mb-2" name="select">
@@ -55,6 +55,20 @@
         </div>
       </div>
     </form>
+    <div id="homepage_disp" class="hide">
+      <table id="search_table" class="tables">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Date Published</th>
+          <th>Fictional</th>
+          <th>Description</th>
+          <th>Add to List</th>
+        </tr>
+      </table>
+    </div>
     <script src="loggedin.js"></script>
+    <script src="homepage.js"></script>
   </body>
 </html>
