@@ -17,7 +17,22 @@ public class LibraryDao implements LibraryDaoInterface {
     @Override
     public void insert(LibraryEntity libraryEntity) {
         // TODO Auto-generated method stub
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "INSERT INTO library VALUES (?, ?, ?::status);";
 
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, libraryEntity.getUser_id());
+            preparedStatement.setInt(2, libraryEntity.getBook_id());
+            preparedStatement.setString(3, libraryEntity.getReading_status());
+
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return;
     }
 
     @Override
@@ -44,6 +59,32 @@ public class LibraryDao implements LibraryDaoInterface {
 
             return libraryList;
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public LibraryEntity selectUserAndBook(int user_id, int book_id) {
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "SELECT * FROM library WHERE user_id=? AND book_id=?;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, user_id);
+            preparedStatement.setInt(2, book_id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                LibraryEntity nextBook =  new LibraryEntity(
+                        resultSet.getInt(1),
+                        resultSet.getInt(2),
+                        resultSet.getString(3));
+
+                return nextBook;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -35,6 +35,10 @@ public class App {
                 post(HomeController.homepageSeachHandler);
             });
 
+            path("/homepage/addToList", () -> {
+                post(HomeController.homepageAddHandler);
+            });
+
             path("register", () -> {
                 get(UserController.registerHandler);
                 post(UserController.registerHandler);
