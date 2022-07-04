@@ -1,0 +1,9 @@
+# Created at 2022-07-03T14:06:18.528
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'tepDefinitions.HomepageStepImpl.a_user_enters_a_valid_book_title()[0m'.
+
+# Created at 2022-07-03T14:06:18.531
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '  [36mAnd [0m[36mclicks on the submit button[0m                             [90m# com.project2.StepDefinitions.HomepageStepImpl.clicks_on_the_submit_button()[0m'.
+
+# Created at 2022-07-03T14:06:18.532
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '  [36mThen [0m[36mthe user can see the book details[0m                      [90m# com.project2.StepDefinitions.HomepageStepImpl.the_user_can_see_the_book_details()[0m'.
+
