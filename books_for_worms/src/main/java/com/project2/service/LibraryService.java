@@ -35,8 +35,37 @@ public class LibraryService {
         if(selector_id.equals("all")) {
             List<BookEntity> libentity = libGetBooks.selectAllByUserId(user_id);
             return libentity;
-        }
+        } else {
+            String status = "Wanting to Read";
+            if(selector_id.equals("reading"))
+            {
+                status = "Currently Reading";
+            }
+            if(selector_id.equals("completed")) {
+                status = "Finished Reading";
+            }
 
-        return null;
+            List<BookEntity> libentity = libGetBooks.selectStatusByUserId(user_id, status);
+            return libentity;
+        }
+    }
+
+    public void delete_book_from_library(int user_id, int book_id) {
+        LibraryDao libdeleteBook = new LibraryDao();
+        LibraryEntity libent = new LibraryEntity(user_id, book_id);
+        libdeleteBook.delete(libent);
+    }
+
+    public void update_book_from_library(int user_id, int book_id, String selector) {
+        LibraryDao libUpdateBook = new LibraryDao();
+        String status = "Wanting to Read";
+        if(selector.equals("reading"))
+        {
+            status = "Currently Reading";
+        } else {
+            status = "Finished Reading";
+        }
+        LibraryEntity libent = new LibraryEntity(user_id, book_id, status);
+        libUpdateBook.update(libent);
     }
 }

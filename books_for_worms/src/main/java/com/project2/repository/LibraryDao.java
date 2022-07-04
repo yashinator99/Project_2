@@ -131,16 +131,71 @@ public class LibraryDao implements LibraryDaoInterface {
         return null;
     }
 
+    public List<BookEntity> selectStatusByUserId(int user_id, String status) {
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "SELECT b.* FROM library l JOIN books b ON l.book_id = b.book_id WHERE user_id=? AND reading_status=?::status;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, user_id);
+            preparedStatement.setString(2, status);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<BookEntity> lst = new ArrayList<BookEntity>();
+
+            while (resultSet.next()) {
+                BookEntity nextBook =  new BookEntity(
+                    resultSet.getInt("book_id"),
+                    resultSet.getString("title"),
+                    resultSet.getString("author"),
+                    resultSet.getString("genre"),
+                    resultSet.getDate("year"),
+                    resultSet.getBoolean("fiction"),
+                    resultSet.getString("description"));
+
+                lst.add(nextBook);
+            }
+            return lst;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     @Override
     public void update(LibraryEntity libraryEntity) {
-        // TODO Auto-generated method stub
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "UPDATE library SET reading_status=?::status WHERE user_id=? AND book_id=? ;";
 
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, libraryEntity.getReading_status());
+            preparedStatement.setInt(2, libraryEntity.getUser_id());
+            preparedStatement.setInt(3, libraryEntity.getBook_id());
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return;
     }
 
     @Override
     public void delete(LibraryEntity libraryEntity) {
-        // TODO Auto-generated method stub
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "DELETE FROM library WHERE user_id=? AND book_id=?;";
 
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, libraryEntity.getUser_id());
+            preparedStatement.setInt(2, libraryEntity.getBook_id());
+            preparedStatement.executeUpdate();
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return;
     }
 
 }
