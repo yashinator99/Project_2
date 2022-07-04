@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.project2.repository.entities.UserEntity;
+import com.project2.repository.entities.BookEntity;
 import com.project2.repository.entities.LibraryEntity;
 import com.project2.repository.interfaces.LibraryDaoInterface;
 import com.project2.util.ConnectionFactory;
@@ -95,6 +96,38 @@ public class LibraryDao implements LibraryDaoInterface {
     @Override
     public List<LibraryEntity> selectAll() {
         // TODO Auto-generated method stub
+        return null;
+    }
+
+    public List<BookEntity> selectAllByUserId(int user_id) {
+        Connection connection = ConnectionFactory.getConnection();
+        String sql = "SELECT b.* FROM library l JOIN books b ON l.book_id = b.book_id WHERE user_id=?;";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, user_id);
+
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<BookEntity> lst = new ArrayList<BookEntity>();
+
+            while (resultSet.next()) {
+                BookEntity nextBook =  new BookEntity(
+                    resultSet.getInt("book_id"),
+                    resultSet.getString("title"),
+                    resultSet.getString("author"),
+                    resultSet.getString("genre"),
+                    resultSet.getDate("year"),
+                    resultSet.getBoolean("fiction"),
+                    resultSet.getString("description"));
+
+                lst.add(nextBook);
+            }
+            return lst;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 

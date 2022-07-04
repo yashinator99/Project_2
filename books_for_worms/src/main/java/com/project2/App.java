@@ -3,6 +3,7 @@ package com.project2;
 import static io.javalin.apibuilder.ApiBuilder.*;
 
 import com.project2.controller.HomeController;
+import com.project2.controller.LibraryController;
 import com.project2.controller.UserController;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
@@ -53,6 +54,10 @@ public class App {
 
             path("/login/submit", () -> {
                 post(UserController.loginsubmitHandler);
+            });
+
+            path("/library", () -> {
+                post(LibraryController.libraryHandler);
             });
 
             path("/signout", () -> {
