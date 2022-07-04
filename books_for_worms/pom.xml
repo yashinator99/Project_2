@@ -105,7 +105,8 @@
         <configuration>
           <suiteXmlFiles>
         
-            <suiteXmlFile>src/test/resources/test_selenium_home.xml</suiteXmlFile>
+          <suiteXmlFile>src/test/resources/test_selenium_home.xml</suiteXmlFile>
+           <!-- <suiteXmlFile>src/test/resources/test_selenium_login.xml</suiteXmlFile>-->
           </suiteXmlFiles>
         </configuration>
       </plugin>

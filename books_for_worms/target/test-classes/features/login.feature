@@ -3,9 +3,9 @@ Feature: User Login Feature
 Background: 
     Given a user is on the home page 
     And user follows the Login
-    Scenario: Verification of Login Function (Successful Login)
+    Scenario: Verification of Login Function
 	    Given user on the Login Page
- 	    When a user enters "username" with "johndeo" 
-	    When a user enters "password" with "pass1234"  
+ 	    When a user enters "username" with "test1" 
+	    When a user enters "password" with "test11234"  
 	    And user clicks the "log in" button
 	    Then the user should see the home page

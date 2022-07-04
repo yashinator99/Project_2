@@ -1,13 +1,16 @@
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\LibraryEntity.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\BookEntity.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\util\ConnectionFactory.java
+C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\controller\LibraryController.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\controller\HomeController.java
+C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\models\POM\LoginPageFactory.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\LibraryDaoInterface.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\UserEntity.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\LibraryDao.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\BookDao.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\controller\UserController.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\UserDao.java
+C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\service\LibraryService.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\BookDaoInterface.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\models\POM\HomePageFactory.java
 C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\service\UserService.java
