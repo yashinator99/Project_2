@@ -41,7 +41,10 @@ public class App {
 
             path("register", () -> {
                 get(UserController.registerHandler);
-                post(UserController.registerHandler);
+            });
+
+            path("register/submit", () -> {
+                post(UserController.registerSubmitHandler);
             });
 
             path("/login", () -> {
