@@ -60,6 +60,14 @@ public class App {
                 post(LibraryController.libraryHandler);
             });
 
+            path("/library/delete", () -> {
+                post(LibraryController.libraryDeleteHandler);
+            });
+
+            path("/library/update", () -> {
+                post(LibraryController.libraryUpdateHandler);
+            });
+
             path("/signout", () -> {
                 get(UserController.signoutHandler);
             });

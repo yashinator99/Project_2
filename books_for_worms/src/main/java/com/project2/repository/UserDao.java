@@ -16,7 +16,7 @@ public class UserDao implements UserDaoInterface {
     @Override
     public void insert(UserEntity userEntity) {
         Connection connection = ConnectionFactory.getConnection();
-        String sql = "INSERT INTO users VALUES (default, ?, ?, ?) ;";
+        String sql = "INSERT INTO users VALUES (default, ?, ?, ?);";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -25,11 +25,7 @@ public class UserDao implements UserDaoInterface {
             preparedStatement.setString(2, userEntity.getPassword());
             preparedStatement.setString(3, userEntity.getEmail());
 
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                return;
-            }
+            preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();

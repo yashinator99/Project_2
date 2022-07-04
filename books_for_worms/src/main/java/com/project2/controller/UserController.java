@@ -17,27 +17,22 @@ public class UserController {
         String username = ctx.formParam("username");
         String password = ctx.formParam("password");
         String email = ctx.formParam("email");
-        System.out.println(username+ password+ email);
+        UserService usersvc = new UserService();
+        System.out.println(username + password + email);
         if (username != null && password != null && email != null){
-            UserDao newUserDao = new UserDao();
-            newUserDao.insert(new UserEntity(username, password, email));
-            ctx.redirect("/");
+            usersvc.creating_user(username, password, email);
+            ctx.status(200);
         }else{
-            ctx.json("Please enter valid inputs");
-            ctx.redirect("register.html");
+            ctx.status(400);
         }
     };
 
     public static Handler loginHandler = ctx -> {
-
         ctx.redirect("login.html");
     };
 
     public static Handler loginsubmitHandler = ctx -> {
-        System.out.println("test in loginsubmithandler");
-        System.out.println(ctx.formParam("username") + " " + ctx.formParam("password"));
         UserService srv = new UserService();
-        System.out.println("testing if hit 1");
         int userId = srv.get_user_id(ctx.formParam("username"), ctx.formParam("password"));
         if(userId != -1) {
             System.out.println("Userid " + userId);
@@ -49,7 +44,6 @@ public class UserController {
             System.out.println("Useridfailed " + userId);
             ctx.status(401);
         }
-        System.out.println("testing if hit 2");
     };
 
     public static Handler signoutHandler = ctx -> {

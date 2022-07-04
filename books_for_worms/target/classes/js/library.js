@@ -30,15 +30,60 @@ function postAllBooksLibrary(path, user_id, selector_id, method='post') {
     });
 }
 
-function removeFromList() {
+
+function postUpdate(path, user_id, book_id, selector_id, method='post') {
+    let libraryParams = {"user_id": user_id, "book_id":book_id, "selector_id":selector_id};
+
+    fetch(path, {method:method, body: JSON.stringify(libraryParams)}).
+    then(response => {
+        if(response.status !== 200){
+            throw new Error(response.status);
+        } else {
+            let selector_id = document.getElementById("library_dropdown");
+            const cookieValue = document.cookie.split('; ').find(row => row.startsWith('user_id='))?.split('=')[1];
+            postAllBooksLibrary("/library", cookieValue, selector_id.value, "post");
+        }
+    }).
+    catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+
+function removeFromList(event) {
     console.log("removed");
+    console.log(event.target.name);
+    const cookieValue = document.cookie.split('; ').find(row => row.startsWith('user_id='))?.split('=')[1];
+    postUpdate("/library/delete", cookieValue, event.target.id, event.target.name, "post");
+}
+
+function changeList(event) {
+    console.log("changed");
+    console.log(event.target.name);
+    const cookieValue = document.cookie.split('; ').find(row => row.startsWith('user_id='))?.split('=')[1];
+    postUpdate("/library/update", cookieValue, event.target.id, event.target.name, "post");
 }
 
 function insertRowAll(row,obj) {
     let btn = document.createElement("button");
-    btn.innerHTML = "Remove";
+    let readstatus = document.getElementById("library_dropdown").value;
     btn.id = obj['book_id'];
-    btn.addEventListener("click", removeFromList);
+
+    if(readstatus === "all" || readstatus === "completed") {
+        btn.innerHTML = "Remove";
+        btn.name = "remove";
+        btn.addEventListener("click", removeFromList);
+    } else if(readstatus === "waiting") {
+        btn.innerHTML = "Start Reading";
+        btn.name = "reading";
+        btn.addEventListener("click", changeList);
+    } else {
+        btn.innerHTML = "Finished Reading";
+        btn.name = "completed";
+        btn.addEventListener("click", changeList);
+    }
+
+
     row.insertCell(0).innerHTML = "" + obj['title'];
     row.insertCell(1).innerHTML = "" + obj['author'];
     row.insertCell(2).appendChild(btn);
@@ -51,6 +96,7 @@ function insertRowAll(row,obj) {
  */
 function change_selection(event) {
     console.log(event.target.value);
+    const cookieValue = document.cookie.split('; ').find(row => row.startsWith('user_id='))?.split('=')[1];
     postAllBooksLibrary("/library", cookieValue, event.target.value, "post");
 }
 
