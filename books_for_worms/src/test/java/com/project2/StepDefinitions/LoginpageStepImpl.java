@@ -45,16 +45,20 @@ public class LoginpageStepImpl {
     @When("I click on the login button")
     public void a_user_clicks_login_button() {
         loginPF.clickLoginButton();
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
     }
     @Then("I should see the homepage")
     public void the_user_can_see_the_book_details() {
-        Assert.assertEquals(driver.getTitle(), "Home Page");
+        try {
+            java.lang.Thread.sleep(3000);
+        } catch (Exception e) {
+
+        }
+        Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:9090/homepage.html");
     }
-   /*  @After
+    @After
     public void finish(){
         //driver.close();
         driver.quit();
-    }*/
+    }
 
 }

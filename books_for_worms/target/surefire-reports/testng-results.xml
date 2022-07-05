@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Selenium tests with the Home Page" duration-ms="16289" started-at="2022-07-04T22:50:31 EDT" finished-at="2022-07-04T22:50:47 EDT">
+=======
+  <suite name="Selenium tests with the Home Page" duration-ms="53273" started-at="2022-07-05T09:58:56 EDT" finished-at="2022-07-05T09:59:50 EDT">
+>>>>>>> 34f5348bc371beb978d6e527206d4d301b75ad49
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test name="Test Valid Book Search provides book info" duration-ms="16289" started-at="2022-07-04T22:50:31 EDT" finished-at="2022-07-04T22:50:47 EDT">
       <class name="com.project2.TestRunner">
         <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@710726a3]" name="setUpClass" is-config="true" duration-ms="722" started-at="2022-07-04T22:50:31 EDT" finished-at="2022-07-04T22:50:31 EDT">
@@ -15,17 +20,34 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@6009bea]]>
+=======
+    <test name="Test Valid Book Search provides book info" duration-ms="53273" started-at="2022-07-05T09:58:56 EDT" finished-at="2022-07-05T09:59:50 EDT">
+      <class name="com.project2.TestRunner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setUpClass" is-config="true" duration-ms="700" started-at="2022-07-05T09:58:56 EDT" finished-at="2022-07-05T09:58:57 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@164642a4]]>
+>>>>>>> 34f5348bc371beb978d6e527206d4d301b75ad49
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@710726a3]" name="setupClass" is-config="true" duration-ms="19" started-at="2022-07-04T22:50:31 EDT" finished-at="2022-07-04T22:50:31 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
         <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="feature" duration-ms="8828" started-at="2022-07-04T22:50:31 EDT" data-provider="features" finished-at="2022-07-04T22:50:40 EDT">
+=======
+        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setupClass" is-config="true" duration-ms="29" started-at="2022-07-05T09:58:57 EDT" finished-at="2022-07-05T09:58:57 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupClass -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="8372" started-at="2022-07-05T09:58:57 EDT" data-provider="features" finished-at="2022-07-05T09:59:06 EDT">
+>>>>>>> 34f5348bc371beb978d6e527206d4d301b75ad49
           <params>
             <param index="0">
               <value>
@@ -38,6 +60,7 @@
               </value>
             </param>
           </params>
+<<<<<<< HEAD
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/form/div/div[2]/input"}
@@ -88,6 +111,44 @@ at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/boo
           </reporter-output>
         </test-method> <!-- feature -->
         <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="runScenario" duration-ms="6396" started-at="2022-07-04T22:50:40 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T22:50:47 EDT">
+=======
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="9526" started-at="2022-07-05T09:59:06 EDT" data-provider="features" finished-at="2022-07-05T09:59:15 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verification of Login Function (Successful Login)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Feature use my application, want to be able to Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="9698" started-at="2022-07-05T09:59:15 EDT" data-provider="features" finished-at="2022-07-05T09:59:25 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register a New User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration Feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="6218" started-at="2022-07-05T09:59:25 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-05T09:59:31 EDT">
+>>>>>>> 34f5348bc371beb978d6e527206d4d301b75ad49
           <params>
             <param index="0">
               <value>
@@ -100,6 +161,7 @@ at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/boo
               </value>
             </param>
           </params>
+<<<<<<< HEAD
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/form/div/div[2]/input"}
@@ -150,6 +212,44 @@ at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/boo
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@710726a3]" name="tearDownClass" is-config="true" duration-ms="268" started-at="2022-07-04T22:50:47 EDT" finished-at="2022-07-04T22:50:47 EDT">
+=======
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="9240" started-at="2022-07-05T09:59:31 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-05T09:59:40 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verification of Login Function (Successful Login)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Feature use my application, want to be able to Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="9413" started-at="2022-07-05T09:59:40 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-05T09:59:50 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register a New User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration Feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="tearDownClass" is-config="true" duration-ms="38" started-at="2022-07-05T09:59:50 EDT" finished-at="2022-07-05T09:59:50 EDT">
+>>>>>>> 34f5348bc371beb978d6e527206d4d301b75ad49
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -41,7 +41,7 @@ public class HomepageStepImpl{
     public void a_user_is_on_the_home_page() {
         Assert.assertEquals(driver.getTitle(), "Home Page");
     }
-    @When("a user enters a valid  book title")
+    @When("a user enters a valid book title")
     public void a_user_enters_a_valid_book_title() {
         homePageFactory.inputText("phil");
     }
@@ -55,11 +55,11 @@ public class HomepageStepImpl{
         List<WebElement> rows = driver.findElements(By.tagName("tr"));
         Assert.assertEquals(rows.size() >= 1,true);
     }
-   /*  @After
+    @After
     public void finish(){
         //driver.close();
         driver.quit();
-    }*/
+    }
 
 
 }

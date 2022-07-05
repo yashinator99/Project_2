@@ -104,8 +104,8 @@
         <version>3.0.0-M6</version>
         <configuration>
           <suiteXmlFiles>
-
-            <suiteXmlFile>src/test/resources/test_selenium_home.xml</suiteXmlFile>
+            
+          <suiteXmlFile>src/test/resources/test_selenium_home.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
