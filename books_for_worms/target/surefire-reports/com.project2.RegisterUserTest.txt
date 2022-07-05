@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.project2.RegisterUserTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.248 s - in com.project2.RegisterUserTest
