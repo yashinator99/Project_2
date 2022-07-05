@@ -1,0 +1,7 @@
+<suite name="Register Suite">
+    <test name="Register Test">
+        <classes>
+            <class name="com.project2.RegisterUser" />
+        </classes>
+    </test>
+</suite>

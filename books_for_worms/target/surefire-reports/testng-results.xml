@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <suite name="Selenium tests with the Home Page" duration-ms="16289" started-at="2022-07-04T22:50:31 EDT" finished-at="2022-07-04T22:50:47 EDT">
+=======
+  <suite name="Surefire suite" duration-ms="806" started-at="2022-07-05T17:28:07 EDT" finished-at="2022-07-05T17:28:08 EDT">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="806" started-at="2022-07-05T17:28:07 EDT" finished-at="2022-07-05T17:28:08 EDT">
+      <class name="com.project2.RegisterUserTest">
+        <test-method status="PASS" signature="testUserDaoInsertNegative()[pri:0, instance:com.project2.RegisterUserTest@4923ab24]" name="testUserDaoInsertNegative" duration-ms="723" started-at="2022-07-05T17:28:07 EDT" finished-at="2022-07-05T17:28:08 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDaoInsertNegative -->
+        <test-method status="PASS" signature="testUserDaoInsertPositive()[pri:0, instance:com.project2.RegisterUserTest@4923ab24]" name="testUserDaoInsertPositive" duration-ms="48" started-at="2022-07-05T17:28:08 EDT" finished-at="2022-07-05T17:28:08 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDaoInsertPositive -->
+      </class> <!-- com.project2.RegisterUserTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+>>>>>>> 986b14eb30561e9b0fbe8e63c5bdb541a619a841
 =======
   <suite name="Selenium tests with the Home Page" duration-ms="53273" started-at="2022-07-05T09:58:56 EDT" finished-at="2022-07-05T09:59:50 EDT">
 >>>>>>> 34f5348bc371beb978d6e527206d4d301b75ad49
@@ -256,4 +275,5 @@ at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/boo
       </class> <!-- com.project2.TestRunner -->
     </test> <!-- Test Valid Book Search provides book info -->
   </suite> <!-- Selenium tests with the Home Page -->
+>>>>>>> 34f5348bc371beb978d6e527206d4d301b75ad49
 </testng-results>
