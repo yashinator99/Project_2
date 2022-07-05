@@ -104,8 +104,14 @@
         <version>3.0.0-M6</version>
         <configuration>
           <suiteXmlFiles>
+<<<<<<< HEAD
+        
+          <suiteXmlFile>src/test/resources/test_selenium_home.xml</suiteXmlFile>
+           <!-- <suiteXmlFile>src/test/resources/test_selenium_login.xml</suiteXmlFile>-->
+=======
 
             <suiteXmlFile>src/test/resources/test_selenium_home.xml</suiteXmlFile>
+>>>>>>> 7107c408144349067b5cf343804adc2132dac85c
           </suiteXmlFiles>
         </configuration>
       </plugin>

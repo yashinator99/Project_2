@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Selenium tests with the Login Page]">
+  <test thread-count="5" verbose="0" name="Test Valid User Login (failed)">
+    <classes>
+      <class name="com.project2.TestRunner">
+        <methods>
+          <include name="setupClass"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="feature" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.project2.TestRunner -->
+    </classes>
+  </test> <!-- Test Valid User Login (failed) -->
+</suite> <!-- Failed suite [Selenium tests with the Login Page] -->
