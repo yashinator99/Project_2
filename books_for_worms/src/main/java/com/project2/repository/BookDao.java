@@ -148,14 +148,15 @@ public class BookDao implements BookDaoInterface {
 
     }
 
-    public BookEntity random(){
+    public List<BookEntity> random(){
         Connection connection = ConnectionFactory.getConnection();
-        String sql = "SELECT * FROM books ORDER by random() LIMIT 1;";
+        String sql = "SELECT * FROM books ORDER by random() LIMIT 3;";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             ResultSet resultSet = preparedStatement.executeQuery();
+            List<BookEntity> bookList = new ArrayList<>();
 
             while (resultSet.next()){
                 BookEntity nextBook = new BookEntity(
@@ -166,8 +167,9 @@ public class BookDao implements BookDaoInterface {
                     resultSet.getDate("year"),
                     resultSet.getBoolean("fiction"),
                     resultSet.getString("description"));
-                return nextBook;
+                bookList.add(nextBook);
             }
+            return bookList;
         } catch(SQLException e){
             e.printStackTrace();
         }

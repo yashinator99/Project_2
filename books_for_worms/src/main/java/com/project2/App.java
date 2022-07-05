@@ -48,6 +48,12 @@ public class App {
                 post(UserController.registerSubmitHandler);
             });
 
+            path("/recommendation", () -> {
+                post(HomeController.recommendHandler);
+            });
+
+
+
             path("/login", () -> {
                 get(UserController.loginHandler);
             });

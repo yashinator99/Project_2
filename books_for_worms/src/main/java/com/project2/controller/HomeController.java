@@ -49,4 +49,16 @@ public class HomeController {
             e.printStackTrace();
         }
     };
+
+    public static Handler recommendHandler = ctx -> {
+        BookDao newBookDao = new BookDao();
+        List<BookEntity> lstOfBooks = newBookDao.random();
+        if (lstOfBooks != null && !lstOfBooks.isEmpty()){
+            System.out.println(lstOfBooks);
+            ctx.json(lstOfBooks);
+        } else{
+            System.out.println("notfound");
+            ctx.status(404);
+        }
+    };
 }

@@ -2,7 +2,7 @@
     display: none;
 }
 
-#homepage_disp, #library_disp{
+#homepage_disp, #library_disp, #recommandation_disp{
     margin: auto;
     width: 80%;
     padding-top: 50px;
