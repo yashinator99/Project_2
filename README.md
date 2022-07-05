@@ -5,7 +5,7 @@
 
 ## Project Technologies
     Java, Javalin, JavaScript, HTML, CSS, PostgreSQL, Postman, Selenium, REST, TDD
-    
+
 ## Features
     This website has features like:
     -Register
@@ -15,11 +15,12 @@
     -View books user wants to read
     -View books user has finished reading
     -Search for books according to author, genre etc...
-    
+
 
 
 ## How to run it
 ### Running the website
-   
+   go to App.java and click run
 ### Running the tests
-   
+   Step 1: Go into "cd books_for_worms"
+   Step 2: Then run "mvn verify"
