@@ -27,6 +27,7 @@ function postAllBooksLibrary(path, user_id, selector_id, method='post') {
     }).
     catch((error) => {
         console.error('Error:', error);
+        $('#library_table tr:not(:first)').remove();
     });
 }
 
@@ -46,6 +47,7 @@ function postUpdate(path, user_id, book_id, selector_id, method='post') {
     }).
     catch((error) => {
         console.error('Error:', error);
+        $('#library_table tr:not(:first)').remove();
     });
 }
 

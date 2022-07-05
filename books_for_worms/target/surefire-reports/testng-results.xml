@@ -2,12 +2,17 @@
 <testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Selenium tests with the Home Page" duration-ms="9676" started-at="2022-07-04T17:09:33 EDT" finished-at="2022-07-04T17:09:43 EDT">
+=======
+  <suite name="Selenium tests with the Home Page" duration-ms="9663" started-at="2022-07-04T19:04:18 EDT" finished-at="2022-07-04T19:04:28 EDT">
+>>>>>>> 7107c408144349067b5cf343804adc2132dac85c
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test name="Test Valid Book Search provides book info" duration-ms="9676" started-at="2022-07-04T17:09:33 EDT" finished-at="2022-07-04T17:09:43 EDT">
       <class name="com.project2.TestRunner">
         <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@710726a3]" name="setUpClass" is-config="true" duration-ms="722" started-at="2022-07-04T17:09:33 EDT" finished-at="2022-07-04T17:09:34 EDT">
@@ -15,17 +20,34 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@4c4f4365]]>
+=======
+    <test name="Test Valid Book Search provides book info" duration-ms="9663" started-at="2022-07-04T19:04:18 EDT" finished-at="2022-07-04T19:04:28 EDT">
+      <class name="com.project2.TestRunner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setUpClass" is-config="true" duration-ms="697" started-at="2022-07-04T19:04:18 EDT" finished-at="2022-07-04T19:04:19 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@37191ef0]]>
+>>>>>>> 7107c408144349067b5cf343804adc2132dac85c
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@710726a3]" name="setupClass" is-config="true" duration-ms="14" started-at="2022-07-04T17:09:34 EDT" finished-at="2022-07-04T17:09:34 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
         <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="feature" duration-ms="5145" started-at="2022-07-04T17:09:34 EDT" data-provider="features" finished-at="2022-07-04T17:09:39 EDT">
+=======
+        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setupClass" is-config="true" duration-ms="17" started-at="2022-07-04T19:04:19 EDT" finished-at="2022-07-04T19:04:19 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupClass -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="5577" started-at="2022-07-04T19:04:19 EDT" data-provider="features" finished-at="2022-07-04T19:04:24 EDT">
+>>>>>>> 7107c408144349067b5cf343804adc2132dac85c
           <params>
             <param index="0">
               <value>
@@ -87,7 +109,11 @@ at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/boo
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
+<<<<<<< HEAD
         <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="runScenario" duration-ms="3633" started-at="2022-07-04T17:09:39 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T17:09:43 EDT">
+=======
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="3280" started-at="2022-07-04T19:04:24 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T19:04:28 EDT">
+>>>>>>> 7107c408144349067b5cf343804adc2132dac85c
           <params>
             <param index="0">
               <value>
@@ -149,7 +175,11 @@ at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/boo
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@710726a3]" name="tearDownClass" is-config="true" duration-ms="107" started-at="2022-07-04T17:09:43 EDT" finished-at="2022-07-04T17:09:43 EDT">
+=======
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="tearDownClass" is-config="true" duration-ms="55" started-at="2022-07-04T19:04:28 EDT" finished-at="2022-07-04T19:04:28 EDT">
+>>>>>>> 7107c408144349067b5cf343804adc2132dac85c
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

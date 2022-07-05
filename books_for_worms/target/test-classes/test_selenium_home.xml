@@ -1,7 +1,0 @@
-<suite name="Selenium tests with the Home Page">
-    <test name="Test Valid Book Search provides book info">
-        <classes>
-            <class name="com.project2.TestRunner"/>
-        </classes>
-    </test>
-</suite>

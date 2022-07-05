@@ -18,7 +18,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests{
-    
+
     private TestNGCucumberRunner testNGCucumberRunner;
 
     @BeforeClass( alwaysRun = true)
