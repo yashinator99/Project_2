@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Books For Worms</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="base.html">BooksForWorms</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="recommendation.html">Recommendation</a></li>
+          <li id="library_nav"><a href="library.html">Your Library</a></li>
+          <li id="signout_nav" class="active"><a href="signout.html">Sign Out</a></li>>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">Sign Out</h3>
+      <br />
+      <form id="signout" style="width: 23rem" action="#">
+        <button type="submit" class="btn btn-info btn-lg btn-block">Sign Out</button>
+      </form>
+
+      <!--<p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the navbar.</p> -->
+    </div>
+    <script src="loggedin.js"></script>
+    <script src="signedout.js"></script>
+  </body>
+</html>
