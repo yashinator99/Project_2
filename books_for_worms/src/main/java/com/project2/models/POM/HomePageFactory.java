@@ -11,11 +11,11 @@ public class HomePageFactory {
     @FindBy(id = "Home_search_container")
     WebElement searchContainer;
 
-    @FindBy(xpath = "/html/body/form/div/div[2]/input")
+    @FindBy(xpath = "/html/body/div/form/div/div[2]/input")
     WebElement textInput;
-    
 
-    @FindBy(xpath = "/html/body/form/div/div[3]/input")
+
+    @FindBy(xpath = "/html/body/div/form/div/div[3]/input")
     WebElement searchbutton;
 
     @FindBy(xpath = "/html/body/pre")
@@ -35,6 +35,6 @@ public class HomePageFactory {
         this.searchbutton.click();
 
 
-    
+
 }
 }

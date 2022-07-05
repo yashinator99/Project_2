@@ -55,23 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Valid Book Search provides book info</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
 </tr><tr>
-<<<<<<< HEAD
-<td>Started on:</td><td>Mon Jul 04 20:44:29 EDT 2022</td>
+<td>Started on:</td><td>Tue Jul 05 00:10:43 EDT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9828 ms)</td>
-=======
-<<<<<<< HEAD
-<td>Started on:</td><td>Mon Jul 04 17:09:33 EDT 2022</td>
-</tr>
-<tr><td>Total time:</td><td>9 seconds (9676 ms)</td>
-=======
-<td>Started on:</td><td>Mon Jul 04 19:04:18 EDT 2022</td>
-</tr>
-<tr><td>Total time:</td><td>9 seconds (9663 ms)</td>
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
+<tr><td>Total time:</td><td>26 seconds (26973 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -79,152 +67,33 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-<td title='com.project2.TestRunner.feature()'><b>feature</b><br>Test class: com.project2.TestRunner<br>Parameters: "A user searches for a book using the title criteria", "User search Feature"</td>
+<td title='com.project2.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.project2.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "A user searches for a book using the title criteria", "User search Feature"</td>
 <td></td>
-<td>5</td>
+<td>4</td>
 <td>com.project2.TestRunner@2fd66ad3</td></tr>
 <tr>
-<td title='com.project2.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.project2.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "A user searches for a book using the title criteria", "User search Feature"</td>
-=======
-<td title='com.project2.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.project2.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "A user searches for a book using the title criteria", "User search Feature"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/form/div/div[2]/input&quot;}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-13GBCG0&apos;, ip: &apos;10.0.0.193&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8c4ad1ba798297ad438b16ae21482bab, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58860}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58860/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c4ad1ba798297ad438b16ae21482bab
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy23.sendKeys(Unknown Source)
-	at com.project2.models.POM.HomePageFactory.inputText(HomePageFactory.java:31)
-	at com.project2.StepDefinitions.HomepageStepImpl.a_user_enters_a_valid_book_title(HomepageStepImpl.java:42)
-	at ?.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/books_for_worms/src/test/resources/features/home.feature:8)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2009832657", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2009832657'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/form/div/div[2]/input&quot;}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-13GBCG0&apos;, ip: &apos;10.0.0.193&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8c4ad1ba798297ad438b16ae21482bab, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58860}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58860/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c4ad1ba798297ad438b16ae21482bab
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy23.sendKeys(Unknown Source)
-	at com.project2.models.POM.HomePageFactory.inputText(HomePageFactory.java:31)
-	at com.project2.StepDefinitions.HomepageStepImpl.a_user_enters_a_valid_book_title(HomepageStepImpl.java:42)
-	at ?.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/books_for_worms/src/test/resources/features/home.feature:8)
-</pre></div></td>
-<td>3</td>
+<td title='com.project2.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.project2.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verification of Login Function (Successful Login)", "User Login Feature use my application, want to be able to Login"</td>
+<td></td>
+<td>7</td>
 <td>com.project2.TestRunner@2fd66ad3</td></tr>
 <tr>
 <td title='com.project2.TestRunner.feature()'><b>feature</b><br>Test class: com.project2.TestRunner<br>Parameters: "A user searches for a book using the title criteria", "User search Feature"</td>
-<<<<<<< HEAD
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/form/div/div[2]/input&quot;}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-13GBCG0&apos;, ip: &apos;10.0.0.193&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d2c84b30b3ab0ffd9f5bb0759ad3e5f, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58837}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58837/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d2c84b30b3ab0ffd9f5bb0759ad3e5f
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy23.sendKeys(Unknown Source)
-	at com.project2.models.POM.HomePageFactory.inputText(HomePageFactory.java:31)
-	at com.project2.StepDefinitions.HomepageStepImpl.a_user_enters_a_valid_book_title(HomepageStepImpl.java:42)
-	at ?.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/books_for_worms/src/test/resources/features/home.feature:8)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace113416412", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace113416412'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/form/div/div[2]/input&quot;}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-13GBCG0&apos;, ip: &apos;10.0.0.193&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d2c84b30b3ab0ffd9f5bb0759ad3e5f, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58837}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58837/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d2c84b30b3ab0ffd9f5bb0759ad3e5f
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy23.sendKeys(Unknown Source)
-	at com.project2.models.POM.HomePageFactory.inputText(HomePageFactory.java:31)
-	at com.project2.StepDefinitions.HomepageStepImpl.a_user_enters_a_valid_book_title(HomepageStepImpl.java:42)
-	at ?.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/books_for_worms/src/test/resources/features/home.feature:8)
-</pre></div></td>
-<td>5</td>
-<td>com.project2.TestRunner@710726a3</td></tr>
-=======
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
 <td></td>
-<td>3</td>
+<td>7</td>
 <td>com.project2.TestRunner@2fd66ad3</td></tr>
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
+<tr>
+<td title='com.project2.TestRunner.feature()'><b>feature</b><br>Test class: com.project2.TestRunner<br>Parameters: "Verification of Login Function (Successful Login)", "User Login Feature use my application, want to be able to Login"</td>
+<td></td>
+<td>7</td>
+<td>com.project2.TestRunner@2fd66ad3</td></tr>
 </table><p>
 </body>
 </html>

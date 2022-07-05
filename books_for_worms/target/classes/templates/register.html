@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Books For Worms</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="base.html">BooksForWorms</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="recommendation.html">Recommendation</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li class="active"><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">Register</h3>
+      <br />
+      <form id="register" style="width: 23rem"  action="#">
+        <div class="form-group">
+          <label for="username">Username</label><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-control"
+            placeholder="Enter username"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter password"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            maxlength="50"
+            required
+          />
+        </div>
+        <br />
+      <button type="submit" class="btn btn-info btn-lg btn-block">
+        Register
+      </button>
+    </div>
+  </form>
+    <script src="register.js"></script>
+  </body>
+</html>

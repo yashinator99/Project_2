@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Books For Worms</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="base.html">BooksForWorms</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="recommendation.html">Recommendation</a></li>
+          <li id="library_nav" class="active"><a href="library.html">Your Library</a></li>
+          <li id="signout_nav"><a href="signout.html">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="col-sm-2">
+        <select id="library_dropdown" class="form-control mb-2" name="select">
+          <option value="all">All Books</option>
+          <option value="waiting">Waiting to Read</option>
+          <option value="reading">Currently Reading</option>
+          <option value="completed">Completed Reading</option>
+          <!--<option value="year">Year</option>-->
+        </select>
+      </div>
+    </div>
+    <div id="library_disp" class="container">
+      <table  id="library_table" class="tables">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+    </div>
+    <script src="loggedin.js"></script>
+    <script src="library.js"></script>
+  </body>
+</html>

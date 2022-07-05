@@ -8,7 +8,8 @@
           <include name="setupClass"/>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
-          <include name="feature"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="feature" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.project2.TestRunner -->
     </classes>

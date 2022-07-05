@@ -35,35 +35,13 @@ public class HomepageStepImpl{
 
         homePageFactory = new HomePageFactory(driver);
     }
-<<<<<<< HEAD
-   
-    
-@Given("a user is on the home page")
-public void a_user_is_on_the_home_page() {
-    Assert.assertEquals(driver.getTitle(), "Books For Worms");
-}
-@When("a user enters a valid  book title")
-public void a_user_enters_a_valid_book_title() {
-    homePageFactory.inputText("phil");
-}
-@When("clicks on the submit button")
-public void clicks_on_the_submit_button() {
-    homePageFactory.clickSearchButton();
-}
-@Then("the user can see the book details")
-public void the_user_can_see_the_book_details() {
-  //  String bookText = driver.findElement(By.id("books")).getAttribute("value");
-  String bookText = driver.findElement(By.xpath("/html/body/pre")).getText();
-    Assert.assertEquals(bookText,bookText);
-}
-=======
 
 
     @Given("a user is on the home page")
     public void a_user_is_on_the_home_page() {
         Assert.assertEquals(driver.getTitle(), "Home Page");
     }
-    @When("a user enters a valid  book title")
+    @When("a user enters a valid book title")
     public void a_user_enters_a_valid_book_title() {
         homePageFactory.inputText("phil");
     }
@@ -77,12 +55,11 @@ public void the_user_can_see_the_book_details() {
         List<WebElement> rows = driver.findElements(By.tagName("tr"));
         Assert.assertEquals(rows.size() >= 1,true);
     }
-   /*  @After
+    @After
     public void finish(){
         //driver.close();
         driver.quit();
-    }*/
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
+    }
 
 
 }

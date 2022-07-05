@@ -1,73 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Selenium tests with the Home Page" duration-ms="9828" started-at="2022-07-04T20:44:29 EDT" finished-at="2022-07-04T20:44:39 EDT">
-=======
-<<<<<<< HEAD
-  <suite name="Selenium tests with the Home Page" duration-ms="9676" started-at="2022-07-04T17:09:33 EDT" finished-at="2022-07-04T17:09:43 EDT">
-=======
-  <suite name="Selenium tests with the Home Page" duration-ms="9663" started-at="2022-07-04T19:04:18 EDT" finished-at="2022-07-04T19:04:28 EDT">
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
+  <suite name="Selenium tests with the Home Page" duration-ms="26973" started-at="2022-07-05T00:10:43 EDT" finished-at="2022-07-05T00:11:10 EDT">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-<<<<<<< HEAD
-    <test name="Test Valid Book Search provides book info" duration-ms="9828" started-at="2022-07-04T20:44:29 EDT" finished-at="2022-07-04T20:44:39 EDT">
-=======
-<<<<<<< HEAD
-    <test name="Test Valid Book Search provides book info" duration-ms="9676" started-at="2022-07-04T17:09:33 EDT" finished-at="2022-07-04T17:09:43 EDT">
+    <test name="Test Valid Book Search provides book info" duration-ms="26973" started-at="2022-07-05T00:10:43 EDT" finished-at="2022-07-05T00:11:10 EDT">
       <class name="com.project2.TestRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@710726a3]" name="setUpClass" is-config="true" duration-ms="722" started-at="2022-07-04T17:09:33 EDT" finished-at="2022-07-04T17:09:34 EDT">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setUpClass" is-config="true" duration-ms="711" started-at="2022-07-05T00:10:43 EDT" finished-at="2022-07-05T00:10:44 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4c4f4365]]>
-=======
-    <test name="Test Valid Book Search provides book info" duration-ms="9663" started-at="2022-07-04T19:04:18 EDT" finished-at="2022-07-04T19:04:28 EDT">
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
-      <class name="com.project2.TestRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setUpClass" is-config="true" duration-ms="673" started-at="2022-07-04T20:44:29 EDT" finished-at="2022-07-04T20:44:30 EDT">
-          <params>
-            <param index="0">
-              <value>
-<<<<<<< HEAD
-                <![CDATA[org.testng.TestRunner@4dbad37]]>
-=======
-                <![CDATA[org.testng.TestRunner@37191ef0]]>
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
+                <![CDATA[org.testng.TestRunner@5d7ca698]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setupClass" is-config="true" duration-ms="17" started-at="2022-07-04T20:44:30 EDT" finished-at="2022-07-04T20:44:30 EDT">
+        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setupClass" is-config="true" duration-ms="26" started-at="2022-07-05T00:10:44 EDT" finished-at="2022-07-05T00:10:44 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
-        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="5891" started-at="2022-07-04T20:44:30 EDT" data-provider="features" finished-at="2022-07-04T20:44:35 EDT">
-=======
-<<<<<<< HEAD
-        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@710726a3]" name="setupClass" is-config="true" duration-ms="14" started-at="2022-07-04T17:09:34 EDT" finished-at="2022-07-04T17:09:34 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupClass -->
-        <test-method status="FAIL" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="feature" duration-ms="5145" started-at="2022-07-04T17:09:34 EDT" data-provider="features" finished-at="2022-07-04T17:09:39 EDT">
-=======
-        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="setupClass" is-config="true" duration-ms="17" started-at="2022-07-04T19:04:19 EDT" finished-at="2022-07-04T19:04:19 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupClass -->
-        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="5577" started-at="2022-07-04T19:04:19 EDT" data-provider="features" finished-at="2022-07-04T19:04:24 EDT">
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="7047" started-at="2022-07-05T00:10:44 EDT" data-provider="features" finished-at="2022-07-05T00:10:51 EDT">
           <params>
             <param index="0">
               <value>
@@ -80,64 +38,26 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/form/div/div[2]/input"}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'DESKTOP-13GBCG0', ip: '10.0.0.193', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d2c84b30b3ab0ffd9f5bb0759ad3e5f, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58837}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58837/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d2c84b30b3ab0ffd9f5bb0759ad3e5f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/form/div/div[2]/input"}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'DESKTOP-13GBCG0', ip: '10.0.0.193', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d2c84b30b3ab0ffd9f5bb0759ad3e5f, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58837}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58837/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d2c84b30b3ab0ffd9f5bb0759ad3e5f
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy23.sendKeys(Unknown Source)
-at com.project2.models.POM.HomePageFactory.inputText(HomePageFactory.java:31)
-at com.project2.StepDefinitions.HomepageStepImpl.a_user_enters_a_valid_book_title(HomepageStepImpl.java:42)
-at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/books_for_worms/src/test/resources/features/home.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="3165" started-at="2022-07-04T20:44:35 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T20:44:39 EDT">
-=======
-<<<<<<< HEAD
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@710726a3]" name="runScenario" duration-ms="3633" started-at="2022-07-04T17:09:39 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T17:09:43 EDT">
-=======
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="3280" started-at="2022-07-04T19:04:24 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-04T19:04:28 EDT">
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="feature" duration-ms="7401" started-at="2022-07-05T00:10:51 EDT" data-provider="features" finished-at="2022-07-05T00:10:58 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verification of Login Function (Successful Login)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Feature use my application, want to be able to Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="4289" started-at="2022-07-05T00:10:58 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-05T00:11:02 EDT">
           <params>
             <param index="0">
               <value>
@@ -150,64 +70,26 @@ at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/boo
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/form/div/div[2]/input"}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'DESKTOP-13GBCG0', ip: '10.0.0.193', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8c4ad1ba798297ad438b16ae21482bab, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58860}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58860/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c4ad1ba798297ad438b16ae21482bab]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/form/div/div[2]/input"}
-  (Session info: chrome=103.0.5060.66)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'DESKTOP-13GBCG0', ip: '10.0.0.193', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8c4ad1ba798297ad438b16ae21482bab, findElement {using=xpath, value=/html/body/form/div/div[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\dhine\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58860}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58860/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c4ad1ba798297ad438b16ae21482bab
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy23.sendKeys(Unknown Source)
-at com.project2.models.POM.HomePageFactory.inputText(HomePageFactory.java:31)
-at com.project2.StepDefinitions.HomepageStepImpl.a_user_enters_a_valid_book_title(HomepageStepImpl.java:42)
-at ✽.a user enters a valid  book title(file:///C:/Users/dhine/p2/Project_2/books_for_worms/src/test/resources/features/home.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="tearDownClass" is-config="true" duration-ms="47" started-at="2022-07-04T20:44:39 EDT" finished-at="2022-07-04T20:44:39 EDT">
-=======
-<<<<<<< HEAD
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@710726a3]" name="tearDownClass" is-config="true" duration-ms="107" started-at="2022-07-04T17:09:43 EDT" finished-at="2022-07-04T17:09:43 EDT">
-=======
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="tearDownClass" is-config="true" duration-ms="55" started-at="2022-07-04T19:04:28 EDT" finished-at="2022-07-04T19:04:28 EDT">
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="runScenario" duration-ms="7386" started-at="2022-07-05T00:11:02 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-05T00:11:10 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verification of Login Function (Successful Login)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Feature use my application, want to be able to Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@2fd66ad3]" name="tearDownClass" is-config="true" duration-ms="67" started-at="2022-07-05T00:11:10 EDT" finished-at="2022-07-05T00:11:10 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
