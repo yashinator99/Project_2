@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\yash\Documents\Revature\Project_2_Temp\Project_2\books_for_worms\src\main\java\com\project2\controller\UserController.java
 C:\Users\yash\Documents\Revature\Project_2_Temp\Project_2\books_for_worms\src\main\java\com\project2\repository\LibraryDao.java
 C:\Users\yash\Documents\Revature\Project_2_Temp\Project_2\books_for_worms\src\main\java\com\project2\models\POM\LoginPageFactory.java
@@ -18,45 +17,3 @@ C:\Users\yash\Documents\Revature\Project_2_Temp\Project_2\books_for_worms\src\ma
 C:\Users\yash\Documents\Revature\Project_2_Temp\Project_2\books_for_worms\src\main\java\com\project2\models\UserModel.java
 C:\Users\yash\Documents\Revature\Project_2_Temp\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\LibraryEntity.java
 C:\Users\yash\Documents\Revature\Project_2_Temp\Project_2\books_for_worms\src\main\java\com\project2\util\ConnectionFactory.java
-=======
-<<<<<<< HEAD
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\LibraryEntity.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\BookEntity.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\util\ConnectionFactory.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\controller\LibraryController.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\controller\HomeController.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\LibraryDaoInterface.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\UserEntity.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\LibraryDao.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\BookDao.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\controller\UserController.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\UserDao.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\service\LibraryService.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\BookDaoInterface.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\models\POM\HomePageFactory.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\service\UserService.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\models\UserModel.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\App.java
-C:\Users\dhine\p2\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\UserDaoInterface.java
-=======
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\models\UserModel.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\util\ConnectionFactory.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\LibraryDaoInterface.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\controller\HomeController.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\BookEntity.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\LibraryEntity.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\BookDaoInterface.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\LibraryDao.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\App.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\models\POM\LoginPageFactory.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\entities\UserEntity.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\controller\LibraryController.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\interfaces\UserDaoInterface.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\controller\UserController.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\BookDao.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\service\LibraryService.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\models\POM\HomePageFactory.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\service\UserService.java
-C:\Users\yash\Documents\Revature\Project_2\books_for_worms\src\main\java\com\project2\repository\UserDao.java
->>>>>>> 7107c408144349067b5cf343804adc2132dac85c
->>>>>>> 16ab89555ca5b2581752f338e0d174adf706eb9e
