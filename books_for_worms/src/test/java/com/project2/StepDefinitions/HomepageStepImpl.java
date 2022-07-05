@@ -35,7 +35,7 @@ public class HomepageStepImpl{
     
 @Given("a user is on the home page")
 public void a_user_is_on_the_home_page() {
-    Assert.assertEquals(driver.getTitle(), "Home Page");
+    Assert.assertEquals(driver.getTitle(), "Books For Worms");
 }
 @When("a user enters a valid  book title")
 public void a_user_enters_a_valid_book_title() {
