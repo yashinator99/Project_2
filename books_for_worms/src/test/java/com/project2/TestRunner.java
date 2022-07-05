@@ -14,7 +14,8 @@ import io.cucumber.testng.TestNGCucumberRunner;
 @CucumberOptions(
     plugin = {"pretty", "html:target/cucumber.html"},
     features = {"src/test/resources/features/login.feature",
-    "src/test/resources/features/home.feature"},
+    "src/test/resources/features/home.feature",
+    "src/test/resources/features/register.feature"},
     glue = {"com/project2/StepDefinitions"}
 )
 

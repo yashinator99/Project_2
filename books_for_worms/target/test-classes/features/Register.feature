@@ -1,12 +1,12 @@
 Feature: User Registration Feature
-  	In order to use my application, want to be able to register
 
-Background:
-	Given a non-user is on the home page
-	    And non-user follows the register
- 	    Scenario: Create a New User
-		When a user enters a valid username “johndoe”
-		When a user enters a valid password “pass1234”
-		When a user enters a valid email “johndeo@gmail.com”
+	Scenario: Register a New User
+		Given a user is on the home page
+		When a non-user clicks on the Register page
+		When a non-user inputs a valid username
+		When a non-user inputs a valid password
+		When a non-user inputs a valid email
 		And clicks on the register button
-        Then users can see the successful registration message
+		Then users should be on Login page
+
+
