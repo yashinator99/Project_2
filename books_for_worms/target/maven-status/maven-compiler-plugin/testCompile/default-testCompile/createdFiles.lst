@@ -1,10 +1,7 @@
-com\project2\BasicTest.class
 com\project2\StepDefinitions\RegisterStepImpl.class
-com\project2\RegisterUserTest.class
 com\project2\StepDefinitions\HomepageStepImpl.class
 com\project2\service\UserServiceTest.class
 com\project2\TestRunner.class
+com\project2\AppTest.class
 com\project2\StepDefinitions\LoginpageStepImpl.class
-com\project2\SearchBookTest.class
 com\project2\StepDefinitions\LoginStepImpl.class
-com\project2\LoginUserTest.class

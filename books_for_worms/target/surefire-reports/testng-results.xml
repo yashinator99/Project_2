@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="1215" started-at="2022-07-06T15:27:43 EDT" finished-at="2022-07-06T15:27:45 EDT">
+  <suite name="Surefire suite" duration-ms="1212" started-at="2022-07-06T15:40:28 EDT" finished-at="2022-07-06T15:40:29 EDT">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="1215" started-at="2022-07-06T15:27:43 EDT" finished-at="2022-07-06T15:27:45 EDT">
+    <test name="Surefire test" duration-ms="1212" started-at="2022-07-06T15:40:28 EDT" finished-at="2022-07-06T15:40:29 EDT">
       <class name="com.project2.AppTest">
-        <test-method status="PASS" signature="testBookDaoSearchNegative()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testBookDaoSearchNegative" duration-ms="843" started-at="2022-07-06T15:27:44 EDT" finished-at="2022-07-06T15:27:44 EDT">
+        <test-method status="PASS" signature="testBookDaoSearchNegative()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testBookDaoSearchNegative" duration-ms="902" started-at="2022-07-06T15:40:28 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBookDaoSearchNegative -->
-        <test-method status="PASS" signature="testBookDaoSearchPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testBookDaoSearchPositive" duration-ms="29" started-at="2022-07-06T15:27:44 EDT" finished-at="2022-07-06T15:27:44 EDT">
+        <test-method status="PASS" signature="testBookDaoSearchPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testBookDaoSearchPositive" duration-ms="29" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBookDaoSearchPositive -->
-        <test-method status="PASS" signature="testRandomBooks()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testRandomBooks" duration-ms="24" started-at="2022-07-06T15:27:44 EDT" finished-at="2022-07-06T15:27:45 EDT">
+        <test-method status="PASS" signature="testRandomBooks()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testRandomBooks" duration-ms="24" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRandomBooks -->
-        <test-method status="PASS" signature="testUserDaoInsertNegative()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoInsertNegative" duration-ms="58" started-at="2022-07-06T15:27:45 EDT" finished-at="2022-07-06T15:27:45 EDT">
+        <test-method status="PASS" signature="testUserDaoInsertNegative()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoInsertNegative" duration-ms="57" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserDaoInsertNegative -->
-        <test-method status="PASS" signature="testUserDaoInsertPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoInsertPositive" duration-ms="55" started-at="2022-07-06T15:27:45 EDT" finished-at="2022-07-06T15:27:45 EDT">
+        <test-method status="PASS" signature="testUserDaoInsertPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoInsertPositive" duration-ms="50" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserDaoInsertPositive -->
-        <test-method status="PASS" signature="testUserDaoLoginNegativePassword()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginNegativePassword" duration-ms="34" started-at="2022-07-06T15:27:45 EDT" finished-at="2022-07-06T15:27:45 EDT">
+        <test-method status="PASS" signature="testUserDaoLoginNegativePassword()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginNegativePassword" duration-ms="24" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserDaoLoginNegativePassword -->
-        <test-method status="PASS" signature="testUserDaoLoginNegativeUsername()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginNegativeUsername" duration-ms="23" started-at="2022-07-06T15:27:45 EDT" finished-at="2022-07-06T15:27:45 EDT">
+        <test-method status="PASS" signature="testUserDaoLoginNegativeUsername()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginNegativeUsername" duration-ms="23" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserDaoLoginNegativeUsername -->
-        <test-method status="PASS" signature="testUserDaoLoginPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginPositive" duration-ms="24" started-at="2022-07-06T15:27:45 EDT" finished-at="2022-07-06T15:27:45 EDT">
+        <test-method status="PASS" signature="testUserDaoLoginPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginPositive" duration-ms="23" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserDaoLoginPositive -->
