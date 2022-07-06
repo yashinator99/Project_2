@@ -1,0 +1,49 @@
+{
+	"id": "f287b88d-1a60-406a-ae09-aac29a305591",
+	"name": "Recommendation",
+	"timestamp": "2022-07-06T10:46:42.803Z",
+	"collection_id": "21082386-8f44ee1b-609e-4996-a68c-d0260fbfb06f",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 1,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "88cc0693-b7d6-43d3-b920-8667c67488d0",
+			"name": "Get 3 Random Recommendations",
+			"url": "http://localhost:9090/recommendation",
+			"time": 1193,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get 3 Random Recommendations": true
+			},
+			"testPassFailCounts": {
+				"Get 3 Random Recommendations": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1193
+			],
+			"allTests": [
+				{
+					"Get 3 Random Recommendations": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1193,
+	"collection": {
+		"requests": [
+			{
+				"id": "88cc0693-b7d6-43d3-b920-8667c67488d0",
+				"method": "POST"
+			}
+		]
+	}
+}
