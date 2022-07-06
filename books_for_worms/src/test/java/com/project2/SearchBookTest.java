@@ -49,7 +49,7 @@ public class SearchBookTest {
         List<BookEntity> booksFound = bookDao.searchAllBooks("Title", "night");
         Assert.assertEquals(booksFound, booksToFind);
     };
-    
+
     @Test
     public void testBookDaoSearchNegative(){
         BookDao bookDao = new BookDao();
@@ -58,7 +58,7 @@ public class SearchBookTest {
         System.out.println(booksFound);
         System.out.println(booksToFind);
         Assert.assertEquals(booksFound, booksToFind);
-        
+
 
     }
 }

@@ -102,5 +102,18 @@ public class AppTest {
 
 
     }
+
+    @Test
+    public void testRandomBooks(){
+        BookDao bookDao = new BookDao();
+        List<BookEntity> randomBooks = bookDao.random();
+
+
+        Assert.assertNotNull(randomBooks);
+        Assert.assertEquals(randomBooks.size(), 3);
+        for (BookEntity book : randomBooks){
+            Assert.assertNotNull(book);
+        };
+    };
 }
 
