@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">books_for_worms</a> &gt; <a href="index.source.html" class="el_package">com.project2.controller</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package com.project2.controller;
+
+import com.project2.repository.UserDao;
+import com.project2.repository.entities.UserEntity;
+import com.project2.service.UserService;
+
+import io.javalin.http.Handler;
+
+
+<span class="nc" id="L10">public class UserController {</span>
+
+<span class="nc" id="L12">    public static Handler registerHandler = ctx -&gt; {</span>
+<span class="nc" id="L13">            ctx.redirect(&quot;register.html&quot;);</span>
+<span class="nc" id="L14">    };</span>
+
+<span class="nc" id="L16">    public static Handler registerSubmitHandler = ctx -&gt; {</span>
+<span class="nc" id="L17">        String username = ctx.formParam(&quot;username&quot;);</span>
+<span class="nc" id="L18">        String password = ctx.formParam(&quot;password&quot;);</span>
+<span class="nc" id="L19">        String email = ctx.formParam(&quot;email&quot;);</span>
+<span class="nc" id="L20">        UserService usersvc = new UserService();</span>
+<span class="nc" id="L21">        System.out.println(username + password + email);</span>
+<span class="nc bnc" id="L22" title="All 6 branches missed.">        if (username != &quot;&quot; &amp;&amp; password != &quot;&quot; &amp;&amp; email != &quot;&quot;){</span>
+<span class="nc" id="L23">            usersvc.creating_user(username, password, email);</span>
+<span class="nc" id="L24">            ctx.status(200);</span>
+        }else{
+<span class="nc" id="L26">            ctx.status(400);</span>
+        }
+<span class="nc" id="L28">    };</span>
+
+<span class="nc" id="L30">    public static Handler loginHandler = ctx -&gt; {</span>
+<span class="nc" id="L31">        ctx.redirect(&quot;login.html&quot;);</span>
+<span class="nc" id="L32">    };</span>
+
+<span class="nc" id="L34">    public static Handler loginsubmitHandler = ctx -&gt; {</span>
+<span class="nc" id="L35">        UserService srv = new UserService();</span>
+<span class="nc" id="L36">        int userId = srv.get_user_id(ctx.formParam(&quot;username&quot;), ctx.formParam(&quot;password&quot;));</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if(userId != -1) {</span>
+<span class="nc" id="L38">            System.out.println(&quot;Userid &quot; + userId);</span>
+<span class="nc" id="L39">            ctx.cookieStore(&quot;user_id&quot;, userId);</span>
+            //ctx.redirect(&quot;/&quot;);
+<span class="nc" id="L41">            ctx.result(&quot;&quot;+userId);</span>
+        } else {
+            //ctx.redirect(&quot;/login&quot;);
+<span class="nc" id="L44">            System.out.println(&quot;Useridfailed &quot; + userId);</span>
+<span class="nc" id="L45">            ctx.status(401);</span>
+        }
+<span class="nc" id="L47">    };</span>
+
+<span class="nc" id="L49">    public static Handler signoutHandler = ctx -&gt; {</span>
+<span class="nc" id="L50">        System.out.println(&quot;test in signoutHandler&quot;);</span>
+<span class="nc" id="L51">        ctx.removeCookie(&quot;user_id&quot;);</span>
+<span class="nc" id="L52">        ctx.status(200);</span>
+<span class="nc" id="L53">    };</span>
+
+
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

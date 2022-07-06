@@ -99,12 +99,44 @@
   <build>
     <plugins>
       <plugin>
+      <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.8</version>
+        <executions>
+            <execution>
+                <id>pre-unit-test</id>
+                <goals>
+                    <goal>prepare-agent</goal>
+                </goals>
+                <configuration>
+                  <!-- Sets the path to the file which contains the execution data. -->
+                 <configuration>
+                    <destFile>target/jacoco.exec</destFile>
+                    <propertyName>surefireArgLine</propertyName>
+                 </configuration>
+                  <!--
+                      Sets the name of the property containing the settings
+                      for JaCoCo runtime agent.
+                  -->
+
+             </configuration>
+            </execution>
+
+            <execution>
+                <id>report</id>
+                <phase>prepare-package</phase>
+                <goals>
+                    <goal>report</goal>
+                </goals>
+            </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M6</version>
         <configuration>
           <suiteXmlFiles>
-            
           <suiteXmlFile>src/test/resources/test_selenium_home.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
@@ -117,7 +149,12 @@
         </configuration>
       </plugin>
     </plugins>
+
+
+
   </build>
+
+
 
 
 </project>

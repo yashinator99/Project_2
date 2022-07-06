@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BookDao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">books_for_worms</a> &gt; <a href="index.source.html" class="el_package">com.project2.repository</a> &gt; <span class="el_source">BookDao.java</span></div><h1>BookDao.java</h1><pre class="source lang-java linenums">package com.project2.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.project2.repository.entities.BookEntity;
+import com.project2.repository.interfaces.BookDaoInterface;
+import com.project2.util.ConnectionFactory;
+
+<span class="nc" id="L14">public class BookDao implements BookDaoInterface {</span>
+
+    @Override
+    public void insert(BookEntity bookEntity) {
+<span class="nc" id="L18">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L19">        String sql = &quot;INSERT INTO books VALUES (default , ?, ?, ?, ?, ?, ?) ;&quot;;</span>
+
+        try {
+<span class="nc" id="L22">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+<span class="nc" id="L23">            preparedStatement.setString(1, bookEntity.getTitle());</span>
+<span class="nc" id="L24">            preparedStatement.setString(2, bookEntity.getAuthor());</span>
+<span class="nc" id="L25">            preparedStatement.setString(3, bookEntity.getGenre());</span>
+<span class="nc" id="L26">            preparedStatement.setDate(4, bookEntity.getYear());</span>
+<span class="nc" id="L27">            preparedStatement.setBoolean(5, bookEntity.isFiction());</span>
+<span class="nc" id="L28">            preparedStatement.setString(6, bookEntity.getDescription());</span>
+
+<span class="nc" id="L30">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+
+<span class="nc bnc" id="L32" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L33">                return;</span>
+            }
+
+<span class="nc" id="L36">        } catch (SQLException e) {</span>
+<span class="nc" id="L37">            e.printStackTrace();</span>
+<span class="nc" id="L38">        }</span>
+<span class="nc" id="L39">        return;</span>
+
+    }
+
+    @Override
+    public BookEntity select(int book_id) {
+<span class="nc" id="L45">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L46">        String sql = &quot;SELECT * FROM books WHERE book_id=? ;&quot;;</span>
+
+        try {
+<span class="nc" id="L49">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+<span class="nc" id="L50">            preparedStatement.setInt(1, book_id);</span>
+
+<span class="nc" id="L52">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+
+<span class="nc bnc" id="L54" title="All 2 branches missed.">            while (resultSet.next()) {</span>
+<span class="nc" id="L55">                return new BookEntity(</span>
+<span class="nc" id="L56">                        resultSet.getInt(&quot;book_id&quot;),</span>
+<span class="nc" id="L57">                        resultSet.getString(&quot;title&quot;),</span>
+<span class="nc" id="L58">                        resultSet.getString(&quot;author&quot;),</span>
+<span class="nc" id="L59">                        resultSet.getString(&quot;genre&quot;),</span>
+<span class="nc" id="L60">                        resultSet.getDate(&quot;year&quot;),</span>
+<span class="nc" id="L61">                        resultSet.getBoolean(&quot;fiction&quot;),</span>
+<span class="nc" id="L62">                        resultSet.getString(&quot;description&quot;));</span>
+            }
+
+<span class="nc" id="L65">        } catch (SQLException e) {</span>
+<span class="nc" id="L66">            e.printStackTrace();</span>
+<span class="nc" id="L67">        }</span>
+<span class="nc" id="L68">        return null;</span>
+    }
+
+    @Override
+    public List&lt;BookEntity&gt; selectAll() {
+<span class="nc" id="L73">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L74">        String sql = &quot;SELECT * FROM books;&quot;;</span>
+
+        try {
+<span class="nc" id="L77">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+
+<span class="nc" id="L79">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+
+<span class="nc" id="L81">            List&lt;BookEntity&gt; bookList = new ArrayList&lt;&gt;();</span>
+
+<span class="nc bnc" id="L83" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L84">                BookEntity nextBook = new BookEntity(</span>
+<span class="nc" id="L85">                    resultSet.getInt(&quot;book_id&quot;),</span>
+<span class="nc" id="L86">                    resultSet.getString(&quot;title&quot;),</span>
+<span class="nc" id="L87">                    resultSet.getString(&quot;author&quot;),</span>
+<span class="nc" id="L88">                    resultSet.getString(&quot;genre&quot;),</span>
+<span class="nc" id="L89">                    resultSet.getDate(&quot;year&quot;),</span>
+<span class="nc" id="L90">                    resultSet.getBoolean(&quot;fiction&quot;),</span>
+<span class="nc" id="L91">                    resultSet.getString(&quot;description&quot;));</span>
+
+<span class="nc" id="L93">                bookList.add(nextBook);</span>
+<span class="nc" id="L94">            }</span>
+
+<span class="nc" id="L96">            return bookList;</span>
+<span class="nc" id="L97">        } catch(SQLException e){</span>
+<span class="nc" id="L98">            e.printStackTrace();</span>
+        }
+<span class="nc" id="L100">        return null;</span>
+    }
+
+    @Override
+    public void update(BookEntity bookEntity) {
+<span class="nc" id="L105">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L106">        String sql = &quot;UPDATE books SET title=?, author=?, genre=?, year=?, fiction=?, description=? WHERE book_id=? ;&quot;;</span>
+
+        try {
+<span class="nc" id="L109">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+<span class="nc" id="L110">            preparedStatement.setString(1, bookEntity.getTitle());</span>
+<span class="nc" id="L111">            preparedStatement.setString(2, bookEntity.getAuthor());</span>
+<span class="nc" id="L112">            preparedStatement.setString(3, bookEntity.getGenre());</span>
+<span class="nc" id="L113">            preparedStatement.setDate(4, bookEntity.getYear());</span>
+<span class="nc" id="L114">            preparedStatement.setBoolean(5, bookEntity.isFiction());</span>
+<span class="nc" id="L115">            preparedStatement.setString(6, bookEntity.getDescription());</span>
+<span class="nc" id="L116">            preparedStatement.setInt(7, bookEntity.getBook_id());</span>
+
+<span class="nc" id="L118">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+
+<span class="nc bnc" id="L120" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L121">                return;</span>
+            }
+<span class="nc" id="L123">        } catch (SQLException e){</span>
+<span class="nc" id="L124">            e.printStackTrace();</span>
+<span class="nc" id="L125">        }</span>
+<span class="nc" id="L126">        return;</span>
+
+    }
+
+    @Override
+    public void delete(BookEntity bookEntity) {
+<span class="nc" id="L132">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L133">        String sql = &quot;DELETE FROM books WHERE book_id=?;&quot;;</span>
+
+        try {
+<span class="nc" id="L136">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+<span class="nc" id="L137">            preparedStatement.setInt(1, bookEntity.getBook_id());</span>
+
+<span class="nc" id="L139">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+
+<span class="nc bnc" id="L141" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L142">                return;</span>
+            }
+<span class="nc" id="L144">        } catch(SQLException e){</span>
+<span class="nc" id="L145">            e.printStackTrace();</span>
+<span class="nc" id="L146">        }</span>
+<span class="nc" id="L147">        return;</span>
+
+    }
+
+    public List&lt;BookEntity&gt; random(){
+<span class="nc" id="L152">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L153">        String sql = &quot;SELECT * FROM books ORDER by random() LIMIT 3;&quot;;</span>
+
+        try {
+<span class="nc" id="L156">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+
+<span class="nc" id="L158">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+<span class="nc" id="L159">            List&lt;BookEntity&gt; bookList = new ArrayList&lt;&gt;();</span>
+
+<span class="nc bnc" id="L161" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L162">                BookEntity nextBook = new BookEntity(</span>
+<span class="nc" id="L163">                    resultSet.getInt(&quot;book_id&quot;),</span>
+<span class="nc" id="L164">                    resultSet.getString(&quot;title&quot;),</span>
+<span class="nc" id="L165">                    resultSet.getString(&quot;author&quot;),</span>
+<span class="nc" id="L166">                    resultSet.getString(&quot;genre&quot;),</span>
+<span class="nc" id="L167">                    resultSet.getDate(&quot;year&quot;),</span>
+<span class="nc" id="L168">                    resultSet.getBoolean(&quot;fiction&quot;),</span>
+<span class="nc" id="L169">                    resultSet.getString(&quot;description&quot;));</span>
+<span class="nc" id="L170">                bookList.add(nextBook);</span>
+<span class="nc" id="L171">            }</span>
+<span class="nc" id="L172">            return bookList;</span>
+<span class="nc" id="L173">        } catch(SQLException e){</span>
+<span class="nc" id="L174">            e.printStackTrace();</span>
+        }
+
+<span class="nc" id="L177">        return null;</span>
+    }
+
+    public BookEntity search(String column, String searchTerm){
+<span class="nc" id="L181">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L182">        String sql = &quot;SELECT * FROM books WHERE UPPER(&quot; + column  + &quot;) LIKE UPPER(?);&quot;;</span>
+        try {
+<span class="nc" id="L184">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+<span class="nc" id="L185">            preparedStatement.setString(1, &quot;%&quot; + searchTerm + &quot;%&quot;);</span>
+
+<span class="nc" id="L187">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+
+<span class="nc bnc" id="L189" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L190">                BookEntity nextBook = new BookEntity(</span>
+<span class="nc" id="L191">                    resultSet.getInt(&quot;book_id&quot;),</span>
+<span class="nc" id="L192">                    resultSet.getString(&quot;title&quot;),</span>
+<span class="nc" id="L193">                    resultSet.getString(&quot;author&quot;),</span>
+<span class="nc" id="L194">                    resultSet.getString(&quot;genre&quot;),</span>
+<span class="nc" id="L195">                    resultSet.getDate(&quot;year&quot;),</span>
+<span class="nc" id="L196">                    resultSet.getBoolean(&quot;fiction&quot;),</span>
+<span class="nc" id="L197">                    resultSet.getString(&quot;description&quot;));</span>
+<span class="nc" id="L198">                return nextBook;</span>
+            }
+<span class="nc" id="L200">        } catch(SQLException e){</span>
+<span class="nc" id="L201">            e.printStackTrace();</span>
+<span class="nc" id="L202">        }</span>
+<span class="nc" id="L203">        return null;</span>
+    }
+
+    public List&lt;BookEntity&gt; searchAllBooks(String column, String searchTerm){
+<span class="nc" id="L207">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L208">        String sql = &quot;SELECT * FROM books WHERE UPPER(&quot; + column  + &quot;) LIKE UPPER(?);&quot;;</span>
+        try {
+<span class="nc" id="L210">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+<span class="nc" id="L211">            preparedStatement.setString(1, &quot;%&quot; + searchTerm + &quot;%&quot;);</span>
+
+<span class="nc" id="L213">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+<span class="nc" id="L214">            List&lt;BookEntity&gt; lstOfBooks = new ArrayList&lt;BookEntity&gt;();</span>
+<span class="nc bnc" id="L215" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L216">                BookEntity nextBook = new BookEntity(</span>
+<span class="nc" id="L217">                    resultSet.getInt(&quot;book_id&quot;),</span>
+<span class="nc" id="L218">                    resultSet.getString(&quot;title&quot;),</span>
+<span class="nc" id="L219">                    resultSet.getString(&quot;author&quot;),</span>
+<span class="nc" id="L220">                    resultSet.getString(&quot;genre&quot;),</span>
+<span class="nc" id="L221">                    resultSet.getDate(&quot;year&quot;),</span>
+<span class="nc" id="L222">                    resultSet.getBoolean(&quot;fiction&quot;),</span>
+<span class="nc" id="L223">                    resultSet.getString(&quot;description&quot;));</span>
+<span class="nc" id="L224">                lstOfBooks.add(nextBook);</span>
+<span class="nc" id="L225">            }</span>
+<span class="nc" id="L226">            return lstOfBooks;</span>
+<span class="nc" id="L227">        } catch(SQLException e){</span>
+<span class="nc" id="L228">            e.printStackTrace();</span>
+        }
+<span class="nc" id="L230">        return null;</span>
+    }
+
+    public BookEntity search(int searchTerm){
+<span class="nc" id="L234">        Connection connection = ConnectionFactory.getConnection();</span>
+<span class="nc" id="L235">        String sql = &quot;SELECT * FROM books WHERE book_id =?;&quot;;</span>
+        try {
+<span class="nc" id="L237">            PreparedStatement preparedStatement = connection.prepareStatement(sql);</span>
+<span class="nc" id="L238">            preparedStatement.setInt(1, searchTerm);</span>
+
+<span class="nc" id="L240">            ResultSet resultSet = preparedStatement.executeQuery();</span>
+
+<span class="nc bnc" id="L242" title="All 2 branches missed.">            while (resultSet.next()){</span>
+<span class="nc" id="L243">                BookEntity nextBook = new BookEntity(</span>
+<span class="nc" id="L244">                    resultSet.getInt(&quot;book_id&quot;),</span>
+<span class="nc" id="L245">                    resultSet.getString(&quot;title&quot;),</span>
+<span class="nc" id="L246">                    resultSet.getString(&quot;author&quot;),</span>
+<span class="nc" id="L247">                    resultSet.getString(&quot;genre&quot;),</span>
+<span class="nc" id="L248">                    resultSet.getDate(&quot;year&quot;),</span>
+<span class="nc" id="L249">                    resultSet.getBoolean(&quot;fiction&quot;),</span>
+<span class="nc" id="L250">                    resultSet.getString(&quot;description&quot;));</span>
+<span class="nc" id="L251">                return nextBook;</span>
+            }
+<span class="nc" id="L253">        } catch(SQLException e){</span>
+<span class="nc" id="L254">            e.printStackTrace();</span>
+<span class="nc" id="L255">        }</span>
+<span class="nc" id="L256">        return null;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
