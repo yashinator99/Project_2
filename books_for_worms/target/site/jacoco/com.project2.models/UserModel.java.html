@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserModel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">books_for_worms</a> &gt; <a href="index.source.html" class="el_package">com.project2.models</a> &gt; <span class="el_source">UserModel.java</span></div><h1>UserModel.java</h1><pre class="source lang-java linenums">package com.project2.models;
+
+public class UserModel {
+    private int user_id;
+    private String username;
+    private String password;
+    private String email;
+
+<span class="nc" id="L9">    public UserModel(int user_id, String username, String password, String email) {</span>
+<span class="nc" id="L10">        this.user_id = user_id;</span>
+<span class="nc" id="L11">        this.username = username;</span>
+<span class="nc" id="L12">        this.password = password;</span>
+<span class="nc" id="L13">        this.email = email;</span>
+<span class="nc" id="L14">    }</span>
+<span class="nc" id="L15">    public UserModel(String username, String password, String email) {</span>
+<span class="nc" id="L16">    }</span>
+    @Override
+    public int hashCode() {
+<span class="nc" id="L19">        final int prime = 31;</span>
+<span class="nc" id="L20">        int result = 1;</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">        result = prime * result + ((email == null) ? 0 : email.hashCode());</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        result = prime * result + ((password == null) ? 0 : password.hashCode());</span>
+<span class="nc" id="L23">        result = prime * result + user_id;</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        result = prime * result + ((username == null) ? 0 : username.hashCode());</span>
+<span class="nc" id="L25">        return result;</span>
+    }
+    @Override
+    public boolean equals(Object obj) {
+<span class="nc bnc" id="L29" title="All 2 branches missed.">        if (this == obj)</span>
+<span class="nc" id="L30">            return true;</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">        if (obj == null)</span>
+<span class="nc" id="L32">            return false;</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        if (getClass() != obj.getClass())</span>
+<span class="nc" id="L34">            return false;</span>
+<span class="nc" id="L35">        UserModel other = (UserModel) obj;</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        if (email == null) {</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            if (other.email != null)</span>
+<span class="nc" id="L38">                return false;</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        } else if (!email.equals(other.email))</span>
+<span class="nc" id="L40">            return false;</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        if (password == null) {</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">            if (other.password != null)</span>
+<span class="nc" id="L43">                return false;</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        } else if (!password.equals(other.password))</span>
+<span class="nc" id="L45">            return false;</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        if (user_id != other.user_id)</span>
+<span class="nc" id="L47">            return false;</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (username == null) {</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            if (other.username != null)</span>
+<span class="nc" id="L50">                return false;</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        } else if (!username.equals(other.username))</span>
+<span class="nc" id="L52">            return false;</span>
+<span class="nc" id="L53">        return true;</span>
+    }
+    public int getUser_id() {
+<span class="nc" id="L56">        return user_id;</span>
+    }
+    public void setUser_id(int user_id) {
+<span class="nc" id="L59">        this.user_id = user_id;</span>
+<span class="nc" id="L60">    }</span>
+    public String getUsername() {
+<span class="nc" id="L62">        return username;</span>
+    }
+    public void setUsername(String username) {
+<span class="nc" id="L65">        this.username = username;</span>
+<span class="nc" id="L66">    }</span>
+    public String getPassword() {
+<span class="nc" id="L68">        return password;</span>
+    }
+    public void setPassword(String password) {
+<span class="nc" id="L71">        this.password = password;</span>
+<span class="nc" id="L72">    }</span>
+    public String getEmail() {
+<span class="nc" id="L74">        return email;</span>
+    }
+    public void setEmail(String email) {
+<span class="nc" id="L77">        this.email = email;</span>
+<span class="nc" id="L78">    }</span>
+    @Override
+    public String toString() {
+<span class="nc" id="L81">        return &quot;UserModel [email=&quot; + email + &quot;, password=&quot; + password + &quot;, user_id=&quot; + user_id + &quot;, username=&quot;</span>
+                + username + &quot;]&quot;;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,7 +1,7 @@
-<suite name="Register Suite">
-    <test name="Register Test">
+<suite name="Unit Test Suite">
+    <test name="Unit Tests">
         <classes>
-            <class name="com.project2.RegisterUser" />
+            <class name="com.project2.AppTest" />
         </classes>
     </test>
 </suite>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">books_for_worms</a> &gt; <a href="index.source.html" class="el_package">com.project2</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package com.project2;
+
+import static io.javalin.apibuilder.ApiBuilder.*;
+
+import com.project2.controller.HomeController;
+import com.project2.controller.LibraryController;
+import com.project2.controller.UserController;
+import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
+
+<span class="nc" id="L11">public class App {</span>
+    public static void main(String[] args) {
+
+
+<span class="nc" id="L15">        Javalin app = Javalin.create(</span>
+            config -&gt; {
+<span class="nc" id="L17">                config.addStaticFiles(&quot;/templates&quot;, Location.CLASSPATH);</span>
+<span class="nc" id="L18">                config.addStaticFiles(&quot;/js&quot;, Location.CLASSPATH);</span>
+<span class="nc" id="L19">                config.addStaticFiles(&quot;/css&quot;, Location.CLASSPATH);</span>
+<span class="nc" id="L20">            }</span>
+        );
+
+<span class="nc" id="L23">        app.start(9090);</span>
+
+<span class="nc" id="L25">        app.get(&quot;/&quot;, ctx -&gt; {</span>
+<span class="nc" id="L26">            ctx.redirect(&quot;homepage.html&quot;);</span>
+<span class="nc" id="L27">        });</span>
+
+<span class="nc" id="L29">        app.routes(() -&gt; {</span>
+            /*path(&quot;/&quot;, () -&gt; {
+                get(HomeController.homeHandler);
+            });*/
+
+
+<span class="nc" id="L35">            path(&quot;/homepage/search&quot;, () -&gt; {</span>
+<span class="nc" id="L36">                post(HomeController.homepageSeachHandler);</span>
+<span class="nc" id="L37">            });</span>
+
+<span class="nc" id="L39">            path(&quot;/homepage/addToList&quot;, () -&gt; {</span>
+<span class="nc" id="L40">                post(HomeController.homepageAddHandler);</span>
+<span class="nc" id="L41">            });</span>
+
+<span class="nc" id="L43">            path(&quot;register&quot;, () -&gt; {</span>
+<span class="nc" id="L44">                get(UserController.registerHandler);</span>
+<span class="nc" id="L45">            });</span>
+
+<span class="nc" id="L47">            path(&quot;register/submit&quot;, () -&gt; {</span>
+<span class="nc" id="L48">                post(UserController.registerSubmitHandler);</span>
+<span class="nc" id="L49">            });</span>
+
+<span class="nc" id="L51">            path(&quot;/recommendation&quot;, () -&gt; {</span>
+<span class="nc" id="L52">                post(HomeController.recommendHandler);</span>
+<span class="nc" id="L53">            });</span>
+
+
+
+<span class="nc" id="L57">            path(&quot;/login&quot;, () -&gt; {</span>
+<span class="nc" id="L58">                get(UserController.loginHandler);</span>
+<span class="nc" id="L59">            });</span>
+
+<span class="nc" id="L61">            path(&quot;/login/submit&quot;, () -&gt; {</span>
+<span class="nc" id="L62">                post(UserController.loginsubmitHandler);</span>
+<span class="nc" id="L63">            });</span>
+
+<span class="nc" id="L65">            path(&quot;/library&quot;, () -&gt; {</span>
+<span class="nc" id="L66">                post(LibraryController.libraryHandler);</span>
+<span class="nc" id="L67">            });</span>
+
+<span class="nc" id="L69">            path(&quot;/library/delete&quot;, () -&gt; {</span>
+<span class="nc" id="L70">                post(LibraryController.libraryDeleteHandler);</span>
+<span class="nc" id="L71">            });</span>
+
+<span class="nc" id="L73">            path(&quot;/library/update&quot;, () -&gt; {</span>
+<span class="nc" id="L74">                post(LibraryController.libraryUpdateHandler);</span>
+<span class="nc" id="L75">            });</span>
+
+<span class="nc" id="L77">            path(&quot;/signout&quot;, () -&gt; {</span>
+<span class="nc" id="L78">                get(UserController.signoutHandler);</span>
+<span class="nc" id="L79">            });</span>
+
+<span class="nc" id="L81">        });</span>
+
+
+
+<span class="nc" id="L85">    }</span>
+};
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

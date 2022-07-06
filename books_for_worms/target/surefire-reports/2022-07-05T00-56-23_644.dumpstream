@@ -1,5 +1,0 @@
-# Created at 2022-07-05T00:56:24.092
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Revature\java\git\repositories\java_project\Project_2\books_for_worms\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

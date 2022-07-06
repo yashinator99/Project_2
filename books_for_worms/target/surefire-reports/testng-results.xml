@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="752" started-at="2022-07-06T13:34:37 EDT" finished-at="2022-07-06T13:34:38 EDT">
+  <suite name="Surefire suite" duration-ms="1176" started-at="2022-07-06T15:19:41 EDT" finished-at="2022-07-06T15:19:43 EDT">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="752" started-at="2022-07-06T13:34:37 EDT" finished-at="2022-07-06T13:34:38 EDT">
-      <class name="com.project2.SearchBookTest">
-        <test-method status="PASS" signature="testBookDaoSearchNegative()[pri:0, instance:com.project2.SearchBookTest@4923ab24]" name="testBookDaoSearchNegative" duration-ms="692" started-at="2022-07-06T13:34:37 EDT" finished-at="2022-07-06T13:34:38 EDT">
+    <test name="Surefire test" duration-ms="1176" started-at="2022-07-06T15:19:41 EDT" finished-at="2022-07-06T15:19:43 EDT">
+      <class name="com.project2.AppTest">
+        <test-method status="PASS" signature="testBookDaoSearchNegative()[pri:0, instance:com.project2.AppTest@4cdb8504]" name="testBookDaoSearchNegative" duration-ms="893" started-at="2022-07-06T15:19:42 EDT" finished-at="2022-07-06T15:19:42 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBookDaoSearchNegative -->
-        <test-method status="PASS" signature="testBookDaoSearchPositive()[pri:0, instance:com.project2.SearchBookTest@4923ab24]" name="testBookDaoSearchPositive" duration-ms="26" started-at="2022-07-06T13:34:38 EDT" finished-at="2022-07-06T13:34:38 EDT">
+        <test-method status="PASS" signature="testBookDaoSearchPositive()[pri:0, instance:com.project2.AppTest@4cdb8504]" name="testBookDaoSearchPositive" duration-ms="29" started-at="2022-07-06T15:19:42 EDT" finished-at="2022-07-06T15:19:42 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBookDaoSearchPositive -->
-      </class> <!-- com.project2.SearchBookTest -->
+        <test-method status="PASS" signature="testUserDaoInsertNegative()[pri:0, instance:com.project2.AppTest@4cdb8504]" name="testUserDaoInsertNegative" duration-ms="63" started-at="2022-07-06T15:19:42 EDT" finished-at="2022-07-06T15:19:43 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDaoInsertNegative -->
+        <test-method status="PASS" signature="testUserDaoInsertPositive()[pri:0, instance:com.project2.AppTest@4cdb8504]" name="testUserDaoInsertPositive" duration-ms="50" started-at="2022-07-06T15:19:43 EDT" finished-at="2022-07-06T15:19:43 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDaoInsertPositive -->
+        <test-method status="PASS" signature="testUserDaoLoginNegativePassword()[pri:0, instance:com.project2.AppTest@4cdb8504]" name="testUserDaoLoginNegativePassword" duration-ms="23" started-at="2022-07-06T15:19:43 EDT" finished-at="2022-07-06T15:19:43 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDaoLoginNegativePassword -->
+        <test-method status="PASS" signature="testUserDaoLoginNegativeUsername()[pri:0, instance:com.project2.AppTest@4cdb8504]" name="testUserDaoLoginNegativeUsername" duration-ms="22" started-at="2022-07-06T15:19:43 EDT" finished-at="2022-07-06T15:19:43 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDaoLoginNegativeUsername -->
+        <test-method status="PASS" signature="testUserDaoLoginPositive()[pri:0, instance:com.project2.AppTest@4cdb8504]" name="testUserDaoLoginPositive" duration-ms="22" started-at="2022-07-06T15:19:43 EDT" finished-at="2022-07-06T15:19:43 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserDaoLoginPositive -->
+      </class> <!-- com.project2.AppTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

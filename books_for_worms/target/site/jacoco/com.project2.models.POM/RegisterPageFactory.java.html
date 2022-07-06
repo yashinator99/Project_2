@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegisterPageFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">books_for_worms</a> &gt; <a href="index.source.html" class="el_package">com.project2.models.POM</a> &gt; <span class="el_source">RegisterPageFactory.java</span></div><h1>RegisterPageFactory.java</h1><pre class="source lang-java linenums">package com.project2.models.POM;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class RegisterPageFactory {
+    WebDriver webDriver;
+    @FindBy(id = &quot;username&quot;)
+    WebElement username;
+
+    @FindBy(id = &quot;password&quot;)
+    WebElement password;
+
+    @FindBy(id = &quot;email&quot;)
+    WebElement email;
+
+    @FindBy(id = &quot;register btn&quot;)
+    WebElement registerbutton;
+
+    @FindBy(id = &quot;register_nav&quot;)
+    WebElement registerPage;
+
+
+<span class="fc" id="L26">    public RegisterPageFactory(WebDriver webDriver){</span>
+<span class="fc" id="L27">        this.webDriver = webDriver;</span>
+<span class="fc" id="L28">        PageFactory.initElements(webDriver, this);</span>
+<span class="fc" id="L29">    }</span>
+
+    public void inputUsername(String text){
+<span class="fc" id="L32">        this.username.sendKeys(text);</span>
+<span class="fc" id="L33">    }</span>
+
+    public void inputPassword(String text){
+<span class="fc" id="L36">        this.password.sendKeys(text);</span>
+<span class="fc" id="L37">    }</span>
+
+    public void inputEmail(String text){
+<span class="fc" id="L40">        this.email.sendKeys(text);</span>
+<span class="fc" id="L41">    }</span>
+
+    public void clickRegisterButton(){
+<span class="fc" id="L44">        this.registerbutton.click();</span>
+<span class="fc" id="L45">    }</span>
+
+    public void clickRegisterPage(){
+<span class="fc" id="L48">        this.registerPage.click();</span>
+<span class="fc" id="L49">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

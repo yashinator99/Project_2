@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HomeController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">books_for_worms</a> &gt; <a href="index.source.html" class="el_package">com.project2.controller</a> &gt; <span class="el_source">HomeController.java</span></div><h1>HomeController.java</h1><pre class="source lang-java linenums">package com.project2.controller;
+
+import io.javalin.http.Handler;
+import com.project2.repository.BookDao;
+import com.project2.repository.LibraryDao;
+import com.project2.repository.UserDao;
+import com.project2.repository.entities.BookEntity;
+import com.project2.service.LibraryService;
+import java.util.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+<span class="nc" id="L12">public class HomeController {</span>
+
+<span class="nc" id="L14">    public static Handler homepage = ctx -&gt; {</span>
+<span class="nc" id="L15">        ctx.redirect(&quot;base.html&quot;);</span>
+<span class="nc" id="L16">    } ;</span>
+<span class="nc" id="L17">    public static Handler homeHandler = ctx -&gt; {</span>
+<span class="nc" id="L18">        ctx.redirect(&quot;homepage.html&quot;);</span>
+<span class="nc" id="L19">    };</span>
+
+<span class="nc" id="L21">    public static Handler homepageSeachHandler = ctx -&gt; {</span>
+<span class="nc" id="L22">        BookDao newBookDao = new BookDao();</span>
+<span class="nc" id="L23">        String searchCategory = ctx.formParam(&quot;select&quot;);</span>
+<span class="nc" id="L24">        String searchTerm = ctx.formParam(&quot;search&quot;);</span>
+<span class="nc" id="L25">        List&lt;BookEntity&gt; lstOfBooks = newBookDao.searchAllBooks(searchCategory, searchTerm);</span>
+<span class="nc bnc" id="L26" title="All 4 branches missed.">        if (lstOfBooks != null &amp;&amp; !lstOfBooks.isEmpty()){</span>
+<span class="nc" id="L27">            ctx.json(lstOfBooks);</span>
+        } else{
+<span class="nc" id="L29">            ctx.status(404);</span>
+        }
+<span class="nc" id="L31">    };</span>
+
+<span class="nc" id="L33">    public static Handler homepageAddHandler = ctx -&gt; {</span>
+<span class="nc" id="L34">        String jsonbody = ctx.body();</span>
+<span class="nc" id="L35">        LibraryService libsvc = new LibraryService();</span>
+<span class="nc" id="L36">        ObjectMapper objectMapper = new ObjectMapper();</span>
+        try {
+<span class="nc" id="L38">            Map&lt;String, String&gt; map = objectMapper.readValue(jsonbody, Map.class);</span>
+<span class="nc" id="L39">            int user_id = Integer.parseInt(map.get(&quot;user_id&quot;));</span>
+<span class="nc" id="L40">            int book_id = Integer.parseInt(map.get(&quot;book_id&quot;));</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">            if(libsvc.check_book_exist(user_id, book_id)) {</span>
+<span class="nc" id="L42">                System.out.print(&quot;Book exist&quot;);</span>
+            } else {
+<span class="nc" id="L44">                libsvc.insert(user_id, book_id);</span>
+<span class="nc" id="L45">                System.out.print(&quot;Book doesn't exist&quot;);</span>
+            }
+            //System.out.println(&quot;Map is &quot; + map);
+<span class="nc" id="L48">        } catch (Exception e) {</span>
+<span class="nc" id="L49">            e.printStackTrace();</span>
+<span class="nc" id="L50">        }</span>
+<span class="nc" id="L51">    };</span>
+
+<span class="nc" id="L53">    public static Handler recommendHandler = ctx -&gt; {</span>
+<span class="nc" id="L54">        BookDao newBookDao = new BookDao();</span>
+<span class="nc" id="L55">        List&lt;BookEntity&gt; lstOfBooks = newBookDao.random();</span>
+<span class="nc bnc" id="L56" title="All 4 branches missed.">        if (lstOfBooks != null &amp;&amp; !lstOfBooks.isEmpty()){</span>
+<span class="nc" id="L57">            System.out.println(lstOfBooks);</span>
+<span class="nc" id="L58">            ctx.json(lstOfBooks);</span>
+        } else{
+<span class="nc" id="L60">            System.out.println(&quot;notfound&quot;);</span>
+<span class="nc" id="L61">            ctx.status(404);</span>
+        }
+<span class="nc" id="L63">    };</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
