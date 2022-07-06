@@ -1,0 +1,235 @@
+{
+	"id": "e019d8c2-d8d9-49ec-9828-f2911cf3eb08",
+	"name": "Homepage",
+	"timestamp": "2022-07-06T10:45:21.476Z",
+	"collection_id": "21082386-db3dd11b-bee2-4ee0-b2dd-a8980ac2f030",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 7,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f2b095b9-f9cd-401e-b504-d01795ee9bdf",
+			"name": "Search by Title",
+			"url": "http://localhost:9090/homepage/search",
+			"time": 1206,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"+ Search by Title": true
+			},
+			"testPassFailCounts": {
+				"+ Search by Title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1206
+			],
+			"allTests": [
+				{
+					"+ Search by Title": true
+				}
+			]
+		},
+		{
+			"id": "6eb5a51a-0fe3-4f2b-b210-a2729ecc1b74",
+			"name": "Search by Author",
+			"url": "http://localhost:9090/homepage/search",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"+ Search by Author": true
+			},
+			"testPassFailCounts": {
+				"+ Search by Author": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"+ Search by Author": true
+				}
+			]
+		},
+		{
+			"id": "6c53a0d0-10c5-487e-be6a-cf06b841eecd",
+			"name": "Search by Genre",
+			"url": "http://localhost:9090/homepage/search",
+			"time": 38,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"+ Search by Genre": true
+			},
+			"testPassFailCounts": {
+				"+ Search by Genre": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				38
+			],
+			"allTests": [
+				{
+					"+ Search by Genre": true
+				}
+			]
+		},
+		{
+			"id": "ca2bf40f-0cc3-416f-b0da-32bd0b55de2a",
+			"name": "Search by Title",
+			"url": "http://localhost:9090/homepage/search",
+			"time": 37,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"- Search by Title": true
+			},
+			"testPassFailCounts": {
+				"- Search by Title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"- Search by Title": true
+				}
+			]
+		},
+		{
+			"id": "072e6f71-4198-4c8d-9fa1-22dbf9e26b15",
+			"name": "Search by Author",
+			"url": "http://localhost:9090/homepage/search",
+			"time": 35,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"- Search by Author": true
+			},
+			"testPassFailCounts": {
+				"- Search by Author": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"- Search by Author": true
+				}
+			]
+		},
+		{
+			"id": "0dc85f1b-9868-4728-88ca-198af5298dbb",
+			"name": "Search by Genre",
+			"url": "http://localhost:9090/homepage/search",
+			"time": 37,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"- Search by Genre": true
+			},
+			"testPassFailCounts": {
+				"- Search by Genre": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"- Search by Genre": true
+				}
+			]
+		},
+		{
+			"id": "afb66826-b256-4f7a-b17d-7198de7d9b7f",
+			"name": "Get Homepage",
+			"url": "http://localhost:9090/",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get Homepage": true
+			},
+			"testPassFailCounts": {
+				"Get Homepage": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Get Homepage": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1406,
+	"collection": {
+		"requests": [
+			{
+				"id": "f2b095b9-f9cd-401e-b504-d01795ee9bdf",
+				"method": "POST"
+			},
+			{
+				"id": "6eb5a51a-0fe3-4f2b-b210-a2729ecc1b74",
+				"method": "POST"
+			},
+			{
+				"id": "6c53a0d0-10c5-487e-be6a-cf06b841eecd",
+				"method": "POST"
+			},
+			{
+				"id": "ca2bf40f-0cc3-416f-b0da-32bd0b55de2a",
+				"method": "POST"
+			},
+			{
+				"id": "072e6f71-4198-4c8d-9fa1-22dbf9e26b15",
+				"method": "POST"
+			},
+			{
+				"id": "0dc85f1b-9868-4728-88ca-198af5298dbb",
+				"method": "POST"
+			},
+			{
+				"id": "afb66826-b256-4f7a-b17d-7198de7d9b7f",
+				"method": "GET"
+			}
+		]
+	}
+}
