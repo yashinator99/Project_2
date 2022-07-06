@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "e8c6e286-8fc1-4ea7-8809-52f846c34d80",
+		"name": "Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20979647"
+	},
+	"item": [
+		{
+			"name": "Sign Out",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/signout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Successful",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "yash",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bosh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/login/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"login",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Failed Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "yash",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "boss",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/login/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"login",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Failed Username",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "yassh",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bosh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/login/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"login",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
