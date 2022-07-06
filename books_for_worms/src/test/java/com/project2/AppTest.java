@@ -15,7 +15,7 @@ import com.project2.repository.entities.UserEntity;
 public class AppTest {
 
     @Test
-    public void testUserDaoLoginPositive(){
+    public void UserDaoLoginPositiveTest(){
         UserDao userDao = new UserDao();
         UserEntity userEntity = new UserEntity("yash", "bosh", "bosh@gmail");
         Assert.assertNotNull(userDao.select(userEntity.getUsername(), userEntity.getPassword()));

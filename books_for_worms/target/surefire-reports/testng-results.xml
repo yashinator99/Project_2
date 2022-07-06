@@ -1,45 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="1212" started-at="2022-07-06T15:40:28 EDT" finished-at="2022-07-06T15:40:29 EDT">
+  <suite name="Selenium tests with the Home Page" duration-ms="32045" started-at="2022-07-06T17:05:56 EDT" finished-at="2022-07-06T17:06:28 EDT">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@6b2e46af]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="1212" started-at="2022-07-06T15:40:28 EDT" finished-at="2022-07-06T15:40:29 EDT">
-      <class name="com.project2.AppTest">
-        <test-method status="PASS" signature="testBookDaoSearchNegative()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testBookDaoSearchNegative" duration-ms="902" started-at="2022-07-06T15:40:28 EDT" finished-at="2022-07-06T15:40:29 EDT">
+    <test name="Test Valid Book Search provides book info" duration-ms="32045" started-at="2022-07-06T17:05:56 EDT" finished-at="2022-07-06T17:06:28 EDT">
+      <class name="com.project2.TestRunner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.project2.TestRunner@6b2e46af]" name="setUpClass" is-config="true" duration-ms="1329" started-at="2022-07-06T17:05:56 EDT" finished-at="2022-07-06T17:05:57 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@84b0639]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBookDaoSearchNegative -->
-        <test-method status="PASS" signature="testBookDaoSearchPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testBookDaoSearchPositive" duration-ms="29" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@6b2e46af]" name="runScenario" duration-ms="10241" started-at="2022-07-06T17:05:57 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-06T17:06:07 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["A user searches for a book using the title criteria"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User search Feature"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBookDaoSearchPositive -->
-        <test-method status="PASS" signature="testRandomBooks()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testRandomBooks" duration-ms="24" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@6b2e46af]" name="runScenario" duration-ms="10040" started-at="2022-07-06T17:06:07 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-06T17:06:17 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verification of Login Function (Successful Login)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Feature use my application, want to be able to Login"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRandomBooks -->
-        <test-method status="PASS" signature="testUserDaoInsertNegative()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoInsertNegative" duration-ms="57" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.project2.TestRunner@6b2e46af]" name="runScenario" duration-ms="10329" started-at="2022-07-06T17:06:17 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-06T17:06:28 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register a New User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration Feature"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUserDaoInsertNegative -->
-        <test-method status="PASS" signature="testUserDaoInsertPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoInsertPositive" duration-ms="50" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.project2.TestRunner@6b2e46af]" name="tearDownClass" is-config="true" duration-ms="36" started-at="2022-07-06T17:06:28 EDT" finished-at="2022-07-06T17:06:28 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUserDaoInsertPositive -->
-        <test-method status="PASS" signature="testUserDaoLoginNegativePassword()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginNegativePassword" duration-ms="24" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserDaoLoginNegativePassword -->
-        <test-method status="PASS" signature="testUserDaoLoginNegativeUsername()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginNegativeUsername" duration-ms="23" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserDaoLoginNegativeUsername -->
-        <test-method status="PASS" signature="testUserDaoLoginPositive()[pri:0, instance:com.project2.AppTest@2a2843ec]" name="testUserDaoLoginPositive" duration-ms="23" started-at="2022-07-06T15:40:29 EDT" finished-at="2022-07-06T15:40:29 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserDaoLoginPositive -->
-      </class> <!-- com.project2.AppTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.project2.TestRunner -->
+    </test> <!-- Test Valid Book Search provides book info -->
+  </suite> <!-- Selenium tests with the Home Page -->
 </testng-results>

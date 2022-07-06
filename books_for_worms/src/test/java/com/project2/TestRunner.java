@@ -21,26 +21,26 @@ import io.cucumber.testng.TestNGCucumberRunner;
 
 public class TestRunner extends AbstractTestNGCucumberTests{
 
-    private TestNGCucumberRunner testNGCucumberRunner;
+    // private TestNGCucumberRunner testNGCucumberRunner;
 
-    @BeforeClass( alwaysRun = true)
-    public void setupClass(){
-        testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-    }
+    // @BeforeClass( alwaysRun = true)
+    // public void setupClass(){
+    //     testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+    // }
 
-    @Test(dataProvider = "features")
-    public void feature( PickleWrapper pickleWrapper, FeatureWrapper feature){
-        testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
-    }
+    // @Test(dataProvider = "features")
+    // public void feature( PickleWrapper pickleWrapper, FeatureWrapper feature){
+    //     testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
+    // }
 
 
-    @DataProvider
-    public Object[][] features(){
-        return testNGCucumberRunner.provideScenarios();
-    }
+    // @DataProvider
+    // public Object[][] features(){
+    //     return testNGCucumberRunner.provideScenarios();
+    // }
 
-    @AfterClass( alwaysRun = true)
-    public void tearDownClass(){
-        testNGCucumberRunner.finish();
-    }
+    // @AfterClass( alwaysRun = true)
+    // public void tearDownClass(){
+    //     testNGCucumberRunner.finish();
+    // }
 }
