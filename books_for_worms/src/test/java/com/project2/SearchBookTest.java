@@ -1,16 +1,5 @@
 package com.project2;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-public class SearchBookTest {
-
-    @Test
-    public void testBookDaoSearchTitlePositive()
-    
-}
-package com.project2;
-
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
