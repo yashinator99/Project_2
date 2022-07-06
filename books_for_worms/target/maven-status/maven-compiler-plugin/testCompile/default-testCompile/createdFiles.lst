@@ -2,7 +2,5 @@ com\project2\StepDefinitions\RegisterStepImpl.class
 com\project2\StepDefinitions\HomepageStepImpl.class
 com\project2\service\UserServiceTest.class
 com\project2\TestRunner.class
-com\project2\service\LibraryServiceTest.class
 com\project2\AppTest.class
 com\project2\StepDefinitions\LoginpageStepImpl.class
-com\project2\StepDefinitions\LoginStepImpl.class
